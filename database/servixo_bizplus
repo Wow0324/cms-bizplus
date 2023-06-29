@@ -1,0 +1,2210 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Sep 10, 2020 at 06:22 PM
+-- Server version: 10.3.23-MariaDB-cll-lve
+-- PHP Version: 7.3.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `demosly3_bizplus`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_blog`
+--
+
+CREATE TABLE `tbl_blog` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `content_short` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `comment` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_blog`
+--
+
+INSERT INTO `tbl_blog` (`id`, `title`, `slug`, `content`, `content_short`, `created_at`, `photo`, `banner`, `category_id`, `comment`, `lang_id`) VALUES
+(2, 'An usu natum aperiri accommodare hendrerit', 'an-usu-natum-aperiri-accommodare-hendrerit', '<p>Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut. Id illum tantas gloriatur duo. Vis ne prima cetero, erant iusto democritum at vim. Ne integre vivendum delicata eum, ei erat senserit qui.</p>\r\n\r\n<p>Eu semper imperdiet duo, eos ut exerci sanctus impedit, sit ne legere maiorum gubergren. Putent accusamus te qui, vero forensibus ei ius. His nostrud singulis forensibus te, in possim gubergren his. Habemus officiis qui te, vix te meliore rationibus. No augue zril reformidans est. Pro ex unum vidit, no est noster discere neglegentur, et dictas tamquam his.</p>\r\n\r\n<p>Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in eam. Ne sit habeo inimicus, no his liber regione volutpat. Ex quot voluptaria usu, dolor vivendo docendi nec ea. Et atqui vocent integre vim, quod cibo recusabo ei usu, soleat deseruisse percipitur pri no. Aeterno theophrastus id pro.</p>\r\n\r\n<p>Dicit alterum est no, ea per tale possit, cum ad solum malorum offendit. Ea nam meis novum qualisque, pro alia delicata gubergren ad. Ea error eloquentiam vel, quo iusto iudico in. No mazim alterum dignissim nec. Te postea iisque aperiri eum. Eius inciderint at mel.</p>\r\n', 'Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.', '2018-12-03', 'blog-2.jpg', 'blog-banner-2.jpg', 1, 'On', 1),
+(4, 'Ei qui possim abhorreant ei eam iudico disputando', 'ei-qui-possim-abhorreant-ei-eam-iudico-disputando', '<p>Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut. Id illum tantas gloriatur duo. Vis ne prima cetero, erant iusto democritum at vim. Ne integre vivendum delicata eum, ei erat senserit qui.</p>\r\n\r\n<p>Eu semper imperdiet duo, eos ut exerci sanctus impedit, sit ne legere maiorum gubergren. Putent accusamus te qui, vero forensibus ei ius. His nostrud singulis forensibus te, in possim gubergren his. Habemus officiis qui te, vix te meliore rationibus. No augue zril reformidans est. Pro ex unum vidit, no est noster discere neglegentur, et dictas tamquam his.</p>\r\n\r\n<p>Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in eam. Ne sit habeo inimicus, no his liber regione volutpat. Ex quot voluptaria usu, dolor vivendo docendi nec ea. Et atqui vocent integre vim, quod cibo recusabo ei usu, soleat deseruisse percipitur pri no. Aeterno theophrastus id pro.</p>\r\n\r\n<p>Dicit alterum est no, ea per tale possit, cum ad solum malorum offendit. Ea nam meis novum qualisque, pro alia delicata gubergren ad. Ea error eloquentiam vel, quo iusto iudico in. No mazim alterum dignissim nec. Te postea iisque aperiri eum. Eius inciderint at mel.</p>\r\n', 'Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.', '2018-12-03', 'blog-4.jpg', 'blog-banner-4.jpg', 4, 'On', 1),
+(5, 'Lorem ipsum dolor sit amet vel cu habemus', 'lorem-ipsum-dolor-sit-amet-vel-cu-habemus', '<p>Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut. Id illum tantas gloriatur duo. Vis ne prima cetero, erant iusto democritum at vim. Ne integre vivendum delicata eum, ei erat senserit qui.</p>\r\n\r\n<p>Eu semper imperdiet duo, eos ut exerci sanctus impedit, sit ne legere maiorum gubergren. Putent accusamus te qui, vero forensibus ei ius. His nostrud singulis forensibus te, in possim gubergren his. Habemus officiis qui te, vix te meliore rationibus. No augue zril reformidans est. Pro ex unum vidit, no est noster discere neglegentur, et dictas tamquam his.</p>\r\n\r\n<p>Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in eam. Ne sit habeo inimicus, no his liber regione volutpat. Ex quot voluptaria usu, dolor vivendo docendi nec ea. Et atqui vocent integre vim, quod cibo recusabo ei usu, soleat deseruisse percipitur pri no. Aeterno theophrastus id pro.</p>\r\n\r\n<p>Dicit alterum est no, ea per tale possit, cum ad solum malorum offendit. Ea nam meis novum qualisque, pro alia delicata gubergren ad. Ea error eloquentiam vel, quo iusto iudico in. No mazim alterum dignissim nec. Te postea iisque aperiri eum. Eius inciderint at mel.</p>\r\n', 'Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.', '2019-02-19', 'blog-5.jpg', 'blog-banner-5.jpg', 2, 'On', 1),
+(7, 'নিউজ আইটেমের নাম', 'news-item-name-3-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', '2020-09-03', 'blog-7.jpg', 'blog-banner-7.jpg', 5, 'On', 2),
+(8, 'নিউজ আইটেমের নাম', 'news-item-name-2-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', '2020-09-03', 'blog-8.jpg', 'blog-banner-7.jpg', 7, 'On', 2),
+(9, 'নিউজ আইটেমের নাম', 'news-item-name-1-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', '2020-09-03', 'blog-9.jpg', 'blog-banner-7.jpg', 6, 'On', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_category`
+--
+
+CREATE TABLE `tbl_category` (
+  `category_id` int(11) NOT NULL,
+  `category_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `category_slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `category_banner` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_category`
+--
+
+INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_slug`, `category_banner`, `lang_id`) VALUES
+(1, 'Cloud Computing', 'cloud-computing', 'category-banner-1.jpg', 1),
+(2, 'IT Management', 'it-management', 'category-banner-2.jpg', 1),
+(4, 'Business Idea', 'business-idea', 'category-banner-4.jpg', 1),
+(5, 'ক্লাউড কম্পিউটিং', 'cloud-computing-bn', 'category-banner-5.jpg', 2),
+(6, 'আইটি ম্যানেজমেন্ট', 'it-management-bn', 'category-banner-6.jpg', 2),
+(7, 'বিজনেস আইডিয়া', 'business-idea-bn', 'category-banner-7.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_comment`
+--
+
+CREATE TABLE `tbl_comment` (
+  `id` int(11) NOT NULL,
+  `code_body` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `code_main` mediumtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_comment`
+--
+
+INSERT INTO `tbl_comment` (`id`, `code_body`, `code_main`) VALUES
+(1, '<div id=\"fb-root\"></div>\r\n<script>(function(d, s, id) {\r\n  var js, fjs = d.getElementsByTagName(s)[0];\r\n  if (d.getElementById(id)) return;\r\n  js = d.createElement(s); js.id = id;\r\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430\";\r\n  fjs.parentNode.insertBefore(js, fjs);\r\n}(document, \'script\', \'facebook-jssdk\'));</script>', '<div class=\"fb-comments\" data-href=\"https://developers.facebook.com/docs/plugins/comments#configurator\" data-numposts=\"5\"></div>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_country`
+--
+
+CREATE TABLE `tbl_country` (
+  `country_id` int(11) NOT NULL,
+  `country_name` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_country`
+--
+
+INSERT INTO `tbl_country` (`country_id`, `country_name`) VALUES
+(1, 'Afghanistan'),
+(2, 'Albania'),
+(3, 'Algeria'),
+(4, 'American Samoa'),
+(5, 'Andorra'),
+(6, 'Angola'),
+(7, 'Anguilla'),
+(8, 'Antarctica'),
+(9, 'Antigua and Barbuda'),
+(10, 'Argentina'),
+(11, 'Armenia'),
+(12, 'Aruba'),
+(13, 'Australia'),
+(14, 'Austria'),
+(15, 'Azerbaijan'),
+(16, 'Bahamas'),
+(17, 'Bahrain'),
+(18, 'Bangladesh'),
+(19, 'Barbados'),
+(20, 'Belarus'),
+(21, 'Belgium'),
+(22, 'Belize'),
+(23, 'Benin'),
+(24, 'Bermuda'),
+(25, 'Bhutan'),
+(26, 'Bolivia'),
+(27, 'Bosnia and Herzegovina'),
+(28, 'Botswana'),
+(29, 'Bouvet Island'),
+(30, 'Brazil'),
+(31, 'British Indian Ocean Territory'),
+(32, 'Brunei Darussalam'),
+(33, 'Bulgaria'),
+(34, 'Burkina Faso'),
+(35, 'Burundi'),
+(36, 'Cambodia'),
+(37, 'Cameroon'),
+(38, 'Canada'),
+(39, 'Cape Verde'),
+(40, 'Cayman Islands'),
+(41, 'Central African Republic'),
+(42, 'Chad'),
+(43, 'Chile'),
+(44, 'China'),
+(45, 'Christmas Island'),
+(46, 'Cocos (Keeling) Islands'),
+(47, 'Colombia'),
+(48, 'Comoros'),
+(49, 'Democratic Republic of the Congo'),
+(50, 'Republic of Congo'),
+(51, 'Cook Islands'),
+(52, 'Costa Rica'),
+(53, 'Croatia (Hrvatska)'),
+(54, 'Cuba'),
+(55, 'Cyprus'),
+(56, 'Czech Republic'),
+(57, 'Denmark'),
+(58, 'Djibouti'),
+(59, 'Dominica'),
+(60, 'Dominican Republic'),
+(61, 'East Timor'),
+(62, 'Ecuador'),
+(63, 'Egypt'),
+(64, 'El Salvador'),
+(65, 'Equatorial Guinea'),
+(66, 'Eritrea'),
+(67, 'Estonia'),
+(68, 'Ethiopia'),
+(69, 'Falkland Islands (Malvinas)'),
+(70, 'Faroe Islands'),
+(71, 'Fiji'),
+(72, 'Finland'),
+(73, 'France'),
+(74, 'France, Metropolitan'),
+(75, 'French Guiana'),
+(76, 'French Polynesia'),
+(77, 'French Southern Territories'),
+(78, 'Gabon'),
+(79, 'Gambia'),
+(80, 'Georgia'),
+(81, 'Germany'),
+(82, 'Ghana'),
+(83, 'Gibraltar'),
+(84, 'Guernsey'),
+(85, 'Greece'),
+(86, 'Greenland'),
+(87, 'Grenada'),
+(88, 'Guadeloupe'),
+(89, 'Guam'),
+(90, 'Guatemala'),
+(91, 'Guinea'),
+(92, 'Guinea-Bissau'),
+(93, 'Guyana'),
+(94, 'Haiti'),
+(95, 'Heard and Mc Donald Islands'),
+(96, 'Honduras'),
+(97, 'Hong Kong'),
+(98, 'Hungary'),
+(99, 'Iceland'),
+(100, 'India'),
+(101, 'Isle of Man'),
+(102, 'Indonesia'),
+(103, 'Iran (Islamic Republic of)'),
+(104, 'Iraq'),
+(105, 'Ireland'),
+(106, 'Israel'),
+(107, 'Italy'),
+(108, 'Ivory Coast'),
+(109, 'Jersey'),
+(110, 'Jamaica'),
+(111, 'Japan'),
+(112, 'Jordan'),
+(113, 'Kazakhstan'),
+(114, 'Kenya'),
+(115, 'Kiribati'),
+(116, 'Korea, Democratic People\'s Republic of'),
+(117, 'Korea, Republic of'),
+(118, 'Kosovo'),
+(119, 'Kuwait'),
+(120, 'Kyrgyzstan'),
+(121, 'Lao People\'s Democratic Republic'),
+(122, 'Latvia'),
+(123, 'Lebanon'),
+(124, 'Lesotho'),
+(125, 'Liberia'),
+(126, 'Libyan Arab Jamahiriya'),
+(127, 'Liechtenstein'),
+(128, 'Lithuania'),
+(129, 'Luxembourg'),
+(130, 'Macau'),
+(131, 'North Macedonia'),
+(132, 'Madagascar'),
+(133, 'Malawi'),
+(134, 'Malaysia'),
+(135, 'Maldives'),
+(136, 'Mali'),
+(137, 'Malta'),
+(138, 'Marshall Islands'),
+(139, 'Martinique'),
+(140, 'Mauritania'),
+(141, 'Mauritius'),
+(142, 'Mayotte'),
+(143, 'Mexico'),
+(144, 'Micronesia, Federated States of'),
+(145, 'Moldova, Republic of'),
+(146, 'Monaco'),
+(147, 'Mongolia'),
+(148, 'Montenegro'),
+(149, 'Montserrat'),
+(150, 'Morocco'),
+(151, 'Mozambique'),
+(152, 'Myanmar'),
+(153, 'Namibia'),
+(154, 'Nauru'),
+(155, 'Nepal'),
+(156, 'Netherlands'),
+(157, 'Netherlands Antilles'),
+(158, 'New Caledonia'),
+(159, 'New Zealand'),
+(160, 'Nicaragua'),
+(161, 'Niger'),
+(162, 'Nigeria'),
+(163, 'Niue'),
+(164, 'Norfolk Island'),
+(165, 'Northern Mariana Islands'),
+(166, 'Norway'),
+(167, 'Oman'),
+(168, 'Pakistan'),
+(169, 'Palau'),
+(170, 'Palestine'),
+(171, 'Panama'),
+(172, 'Papua New Guinea'),
+(173, 'Paraguay'),
+(174, 'Peru'),
+(175, 'Philippines'),
+(176, 'Pitcairn'),
+(177, 'Poland'),
+(178, 'Portugal'),
+(179, 'Puerto Rico'),
+(180, 'Qatar'),
+(181, 'Reunion'),
+(182, 'Romania'),
+(183, 'Russian Federation'),
+(184, 'Rwanda'),
+(185, 'Saint Kitts and Nevis'),
+(186, 'Saint Lucia'),
+(187, 'Saint Vincent and the Grenadines'),
+(188, 'Samoa'),
+(189, 'San Marino'),
+(190, 'Sao Tome and Principe'),
+(191, 'Saudi Arabia'),
+(192, 'Senegal'),
+(193, 'Serbia'),
+(194, 'Seychelles'),
+(195, 'Sierra Leone'),
+(196, 'Singapore'),
+(197, 'Slovakia'),
+(198, 'Slovenia'),
+(199, 'Solomon Islands'),
+(200, 'Somalia'),
+(201, 'South Africa'),
+(202, 'South Georgia South Sandwich Islands'),
+(203, 'South Sudan'),
+(204, 'Spain'),
+(205, 'Sri Lanka'),
+(206, 'St. Helena'),
+(207, 'St. Pierre and Miquelon'),
+(208, 'Sudan'),
+(209, 'Suriname'),
+(210, 'Svalbard and Jan Mayen Islands'),
+(211, 'Swaziland'),
+(212, 'Sweden'),
+(213, 'Switzerland'),
+(214, 'Syrian Arab Republic'),
+(215, 'Taiwan'),
+(216, 'Tajikistan'),
+(217, 'Tanzania, United Republic of'),
+(218, 'Thailand'),
+(219, 'Togo'),
+(220, 'Tokelau'),
+(221, 'Tonga'),
+(222, 'Trinidad and Tobago'),
+(223, 'Tunisia'),
+(224, 'Turkey'),
+(225, 'Turkmenistan'),
+(226, 'Turks and Caicos Islands'),
+(227, 'Tuvalu'),
+(228, 'Uganda'),
+(229, 'Ukraine'),
+(230, 'United Arab Emirates'),
+(231, 'United Kingdom'),
+(232, 'United States'),
+(233, 'United States minor outlying islands'),
+(234, 'Uruguay'),
+(235, 'Uzbekistan'),
+(236, 'Vanuatu'),
+(237, 'Vatican City State'),
+(238, 'Venezuela'),
+(239, 'Vietnam'),
+(240, 'Virgin Islands (British)'),
+(241, 'Virgin Islands (U.S.)'),
+(242, 'Wallis and Futuna Islands'),
+(243, 'Western Sahara'),
+(244, 'Yemen'),
+(245, 'Zambia'),
+(246, 'Zimbabwe');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_coupon`
+--
+
+CREATE TABLE `tbl_coupon` (
+  `coupon_id` int(11) NOT NULL,
+  `coupon_code` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `coupon_type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `coupon_discount` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `coupon_maximum_use` int(11) NOT NULL,
+  `coupon_existing_use` int(11) NOT NULL,
+  `coupon_start_date` date NOT NULL,
+  `coupon_end_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_coupon`
+--
+
+INSERT INTO `tbl_coupon` (`coupon_id`, `coupon_code`, `coupon_type`, `coupon_discount`, `coupon_maximum_use`, `coupon_existing_use`, `coupon_start_date`, `coupon_end_date`) VALUES
+(1, 'NICE', 'Percentage', '5', 20, 0, '2020-04-09', '2020-12-25'),
+(2, 'STRONG', 'Amount', '15', 14, 1, '2020-04-09', '2020-12-25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_customer`
+--
+
+CREATE TABLE `tbl_customer` (
+  `customer_id` int(10) NOT NULL,
+  `customer_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_phone` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_country` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_address` text COLLATE utf8_unicode_ci NOT NULL,
+  `customer_state` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_city` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_zip` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_status` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_customer`
+--
+
+INSERT INTO `tbl_customer` (`customer_id`, `customer_name`, `customer_email`, `customer_phone`, `customer_country`, `customer_address`, `customer_state`, `customer_city`, `customer_zip`, `customer_password`, `customer_token`, `customer_status`) VALUES
+(1, 'John Doe', 'customer@gmail.com', '111-222-3333', 'United States', '4706 Romrog Way', 'NE', 'Kearney', '68847', '$2y$10$vKbV/Uz7baJEgcEGQ1S8M.DgxAX2CfjBByYDZTu7lzoNQOa/yzMN2', '924da7a407cf8478421db57c2915c64adfc3132a01b837e131f790051681d19e', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_faq`
+--
+
+CREATE TABLE `tbl_faq` (
+  `faq_id` int(11) NOT NULL,
+  `faq_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `faq_content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_faq`
+--
+
+INSERT INTO `tbl_faq` (`faq_id`, `faq_title`, `faq_content`, `lang_id`) VALUES
+(1, 'Vim at natum graeco percipitur te?', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>', 1),
+(2, 'Alterum interesset eum ad?', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.<br></p>', 1),
+(3, 'No eos legimus facilisi constituto?', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.<br></p>', 1),
+(4, 'Dico persequeris contentiones ex pri?', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.<br></p>', 1),
+(5, 'Stet malis accusata est at, cum ad ancillae?', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.<br></p>', 1),
+(7, 'অনবরত জিজ্ঞাসিত প্রশ্ন ১', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও।</p>\r\n', 2),
+(8, 'অনবরত জিজ্ঞাসিত প্রশ্ন ২', '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 2),
+(9, 'অনবরত জিজ্ঞাসিত প্রশ্ন ৩', '<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 2),
+(10, 'অনবরত জিজ্ঞাসিত প্রশ্ন ৪', '<p>তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।<br>\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!</p>\r\n', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lang`
+--
+
+CREATE TABLE `tbl_lang` (
+  `lang_id` int(11) NOT NULL,
+  `lang_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_default` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_lang`
+--
+
+INSERT INTO `tbl_lang` (`lang_id`, `lang_name`, `lang_default`) VALUES
+(1, 'English', 'Yes'),
+(2, 'Bengali', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lang_key`
+--
+
+CREATE TABLE `tbl_lang_key` (
+  `lang_key_id` int(11) NOT NULL,
+  `lang_key` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_value` text COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_lang_key`
+--
+
+INSERT INTO `tbl_lang_key` (`lang_key_id`, `lang_key`, `lang_value`, `lang_id`) VALUES
+(1, 'HOME', 'Home', 1),
+(2, 'ABOUT', 'About', 1),
+(3, 'PHOTO_GALLERY', 'Photo Gallery', 1),
+(4, 'FAQ', 'FAQ', 1),
+(5, 'SERVICE', 'Service', 1),
+(6, 'GALLERY', 'Gallery', 1),
+(7, 'BLOG', 'Blog', 1),
+(8, 'CONTACT', 'Contact', 1),
+(9, 'VIDEO_GALLERY', 'Video Gallery', 1),
+(10, 'CUSTOMER_DASHBOARD', 'Customer Dashboard', 1),
+(11, 'READ_MORE', 'Read More', 1),
+(12, 'EMAIL_ADDRESS', 'Email Address', 1),
+(13, 'NAME', 'Name', 1),
+(14, 'PHONE_NUMBER', 'Phone Number', 1),
+(15, 'SUBJECT', 'Subject', 1),
+(16, 'MESSAGE', 'Message', 1),
+(17, 'SEND_MESSAGE', 'Send Message', 1),
+(18, 'ADDRESS', 'Address', 1),
+(19, 'CONTACT_FORM', 'Contact Form', 1),
+(20, 'CATEGORY', 'Category', 1),
+(21, 'TERMS_AND_CONDIITIONS', 'Terms and Conditions', 1),
+(22, 'PRIVACY_POLICY', 'Privacy Policy', 1),
+(23, 'SHARE_THIS_BLOG', 'Share This Blog', 1),
+(24, 'COMMENT', 'Comment', 1),
+(25, 'DASHBOARD', 'Dashboard', 1),
+(26, 'EDIT_PROFILE', 'Edit Profile', 1),
+(27, 'TEAM_MEMBERS', 'Team Members', 1),
+(28, 'SHOP', 'Shop', 1),
+(29, 'LOGOUT', 'Logout', 1),
+(30, 'WELCOME_TO_DASHBOARD', 'Welcome to the Dashboard', 1),
+(31, 'CUSTOMER_DETAIL', 'Customer Detail:', 1),
+(40, 'SERIAL', 'Serial', 1),
+(41, 'ORDER_HISTORY', 'Order History', 1),
+(42, 'ORDER_NUMBER', 'Order Number', 1),
+(43, 'STATUS', 'Status', 1),
+(44, 'PAGES', 'Pages', 1),
+(45, 'CART', 'Cart', 1),
+(51, 'BACK_TO_PREVIOUS', 'Back to previous', 1),
+(54, 'INCOMING', 'Incoming', 1),
+(57, 'SUCCESS_EDIT_PROFILE', 'Profile Information is updated successfully!', 1),
+(58, 'UPDATE_PROFILE', 'Update Profile', 1),
+(61, 'PASSWORD', 'Password', 1),
+(62, 'RETYPE_PASSWORD', 'Retype Password', 1),
+(68, 'ERROR_MATCH_PASSWORD', 'Passwords do not match!', 1),
+(69, 'CUSTOMER_LOGIN', 'Login', 1),
+(70, 'CUSTOMER_REGISTRATION', 'Registration', 1),
+(71, 'LOGIN', 'Login', 1),
+(72, 'FORGET_PASSWORD', 'Forget Password?', 1),
+(73, 'REGISTRATION', 'Registration', 1),
+(75, 'SUBMIT', 'Submit', 1),
+(76, 'GO_TO_LOGIN_PAGE', 'Go to login page', 1),
+(77, 'NEW_PASSWORD', 'New Password', 1),
+(78, 'SUCCESS_SUBSCRIPTION', 'Your subscription is successful!', 1),
+(83, 'ERROR_EMPTY_PASSWORD', 'Password can not be empty!', 1),
+(87, 'PASSWORD_RESET', 'Password Reset', 1),
+(89, 'ERROR_EMPTY_NAME', 'Name can not be empty!', 1),
+(90, 'ERROR_EMPTY_PHONE', 'Phone Number can not be empty!', 1),
+(91, 'ERROR_EMPTY_EMAIL', 'Email Address can not be empty!', 1),
+(92, 'ERROR_VALID_EMAIL', 'Email Address is invalid!', 1),
+(93, 'ERROR_EMPTY_MESSAGE', 'Message can not be empty!', 1),
+(94, 'SENDER_INFORMATION', 'Sender Information:', 1),
+(95, 'SUBJECT_CONTACT_PAGE', 'Contact Form Email', 1),
+(96, 'SUCCESS_CONTACT_PAGE', 'Thank you for sending the email. We will contact you shortly.', 1),
+(100, 'DAY', 'Day', 1),
+(101, 'DETAIL_INFORMATION', 'Detail Information', 1),
+(103, 'MAKE_REGISTRATION', 'Make Registration', 1),
+(104, 'ACTION', 'Action', 1),
+(105, 'VIEW_DETAIL', 'View Detail', 1),
+(107, 'CLOSE', 'Close', 1),
+(119, 'MAKE_PAYMENT', 'Make Payment', 1),
+(120, 'SELECT_PAYMENT_METHOD', 'Select Payment Method', 1),
+(121, 'PAYPAL', 'PayPal', 1),
+(122, 'STRIPE', 'Stripe', 1),
+(123, 'CARD_NUMBER', 'Card Number', 1),
+(124, 'CARD_CVC_NO', 'Card CVC', 1),
+(125, 'CARD_EXPIRY_MONTH', 'Card Expiry Month', 1),
+(126, 'CARD_EXPIRY_YEAR', 'Card Expiry Year', 1),
+(128, 'SUCCESS_PAYMENT_PAGE', 'Payment is Successful and appointment is confirmed.', 1),
+(129, 'CANCEL_PAYMENT_PAGE', 'Payment is Cancelled. Try again or contact to the ...', 1),
+(130, 'PAYMENT_DATE', 'Payment Date', 1),
+(131, 'PAYMENT_METHOD', 'Payment Method', 1),
+(132, 'TRANSACTION_ID', 'Transaction Id', 1),
+(133, 'PAID_AMOUNT', 'Paid Amount', 1),
+(134, 'PAYMENT_STATUS', 'Payment Status', 1),
+(135, 'INVOICE_NO', 'Invoice No', 1),
+(136, 'HOME', 'হোম', 2),
+(137, 'ABOUT', 'সম্পর্কে', 2),
+(138, 'PHOTO_GALLERY', 'ফটো গ্যালারি', 2),
+(139, 'FAQ', 'প্রশ্নোত্তর', 2),
+(140, 'SERVICE', 'সার্ভিস', 2),
+(141, 'GALLERY', 'গ্যালারি', 2),
+(142, 'BLOG', 'ব্লগ', 2),
+(143, 'CONTACT', 'যোগাযোগ', 2),
+(144, 'VIDEO_GALLERY', 'ভিডিও গ্যালারি', 2),
+(145, 'CUSTOMER_DASHBOARD', 'কাস্টোমার ড্যাশবোর্ড', 2),
+(146, 'READ_MORE', 'আরো পড়ুন', 2),
+(147, 'EMAIL_ADDRESS', 'ইমেইল ঠিকানা', 2),
+(148, 'NAME', 'নাম', 2),
+(149, 'PHONE_NUMBER', 'ফোন নম্বর', 2),
+(150, 'SUBJECT', 'বিষয়', 2),
+(151, 'MESSAGE', 'মেসেজ', 2),
+(152, 'SEND_MESSAGE', 'মেসেজ পাঠান', 2),
+(153, 'ADDRESS', 'ঠিকানা', 2),
+(154, 'CONTACT_FORM', 'যোগাযোগের ফর্ম', 2),
+(155, 'CATEGORY', 'ক্যাটাগরি', 2),
+(156, 'TERMS_AND_CONDIITIONS', 'শর্তসমূহ', 2),
+(157, 'PRIVACY_POLICY', 'গোপনীয় নীতিমালা', 2),
+(158, 'SHARE_THIS_BLOG', 'ব্লগ শেয়ার করুন', 2),
+(159, 'COMMENT', 'কমেন্ট', 2),
+(160, 'DASHBOARD', 'ড্যাশবোর্ড', 2),
+(161, 'EDIT_PROFILE', 'প্রোফাইল এডিট', 2),
+(162, 'TEAM_MEMBERS', 'টিম এর সদস্যগণ', 2),
+(163, 'SHOP', 'দোকান', 2),
+(164, 'LOGOUT', 'লগ অউট', 2),
+(165, 'WELCOME_TO_DASHBOARD', 'ড্যাশবোর্ডে স্বাগতম', 2),
+(166, 'CUSTOMER_DETAIL', 'কাস্টোমার বিস্তারিত', 2),
+(175, 'SERIAL', 'সিরিয়াল', 2),
+(176, 'ORDER_HISTORY', 'অর্ডার ইতিহাস', 2),
+(177, 'ORDER_NUMBER', 'অর্ডার নম্বর', 2),
+(178, 'STATUS', 'স্ট্যাটাস', 2),
+(179, 'PAGES', 'পেজগুলো', 2),
+(180, 'CART', 'কার্ট', 2),
+(186, 'BACK_TO_PREVIOUS', 'আগের অপশনে ফিরে যান', 2),
+(189, 'INCOMING', 'আসতেছে', 2),
+(192, 'SUCCESS_EDIT_PROFILE', 'প্রফাইল তথ্য আপডেট সফলভাবে হয়েছে ', 2),
+(193, 'UPDATE_PROFILE', 'প্রোফাইল আপডেট', 2),
+(196, 'PASSWORD', 'পাসওয়ার্ড', 2),
+(197, 'RETYPE_PASSWORD', 'পূনরায় পাসওয়ার্ড', 2),
+(203, 'ERROR_MATCH_PASSWORD', 'পাসওয়ার্ড মিলে নাই', 2),
+(204, 'CUSTOMER_LOGIN', 'লগিন', 2),
+(205, 'CUSTOMER_REGISTRATION', 'রেজিস্ট্রেশন', 2),
+(206, 'LOGIN', 'লগিন', 2),
+(207, 'FORGET_PASSWORD', 'পাসওয়ার্ড ভুলে গেছেন?', 2),
+(208, 'REGISTRATION', 'রেজিস্ট্রেশন', 2),
+(210, 'SUBMIT', 'সাবমিট', 2),
+(211, 'GO_TO_LOGIN_PAGE', 'লগিন পেজে ফিরে যান', 2),
+(212, 'NEW_PASSWORD', 'নতুন পাসওয়ার্ড', 2),
+(213, 'SUCCESS_SUBSCRIPTION', 'আপনার সাবস্ক্রিপশন সফল হয়েছে', 2),
+(218, 'ERROR_EMPTY_PASSWORD', 'পাসোওয়ার্ড অবশ্যই দিতে হবে', 2),
+(222, 'PASSWORD_RESET', 'পাসওয়ার্ড রিসেট', 2),
+(224, 'ERROR_EMPTY_NAME', 'নাম অবশ্যই দিতে হবে', 2),
+(225, 'ERROR_EMPTY_PHONE', 'ফোন অবশ্যই দিতে হবে', 2),
+(226, 'ERROR_EMPTY_EMAIL', 'ইমেইল অবশ্যই দিতে হবে', 2),
+(227, 'ERROR_VALID_EMAIL', 'ইমেইল ঠিকানা বৈধ নয়', 2),
+(228, 'ERROR_EMPTY_MESSAGE', 'মেসেজ অবশ্যই দিতে হবে', 2),
+(229, 'SENDER_INFORMATION', 'যিনি পাঠিয়েছেন তার তথ্যঃ ', 2),
+(230, 'SUBJECT_CONTACT_PAGE', 'কন্ট্যাক্ট ফর্ম ইমেইল', 2),
+(231, 'SUCCESS_CONTACT_PAGE', 'আমার মেইল করার জন্য ধন্যবাদ। আপনার সাথে দ্রুত যোগাযোগ করা হবে।', 2),
+(235, 'DAY', 'দিন', 2),
+(236, 'DETAIL_INFORMATION', 'বিস্তারিত তথ্য', 2),
+(238, 'MAKE_REGISTRATION', 'রেজিস্ট্রেশন করুন', 2),
+(239, 'ACTION', 'অ্যাকশন', 2),
+(240, 'VIEW_DETAIL', 'বিস্তারিত দেখুন', 2),
+(242, 'CLOSE', 'বন্ধ করুন', 2),
+(254, 'MAKE_PAYMENT', 'পেমেন্ট করুন', 2),
+(255, 'SELECT_PAYMENT_METHOD', 'পেমেন্ট পদ্ধতি নির্বাচন করুন', 2),
+(256, 'PAYPAL', 'PayPal', 2),
+(257, 'STRIPE', 'Stripe', 2),
+(258, 'CARD_NUMBER', 'কার্ড নম্বর', 2),
+(259, 'CARD_CVC_NO', 'কার্ড সিভিসি', 2),
+(260, 'CARD_EXPIRY_MONTH', 'কার্ড শেষ হবার মাস ', 2),
+(261, 'CARD_EXPIRY_YEAR', 'কার্ড শেষ হবার বছর', 2),
+(263, 'SUCCESS_PAYMENT_PAGE', 'পেমেন্ট সফল এবং অ্যাপয়েন্টমেন্ট কমপ্লিট হয়েছে', 2),
+(264, 'CANCEL_PAYMENT_PAGE', 'পেমেন্ট ক্যানসেল করা হয়েছে', 2),
+(265, 'PAYMENT_DATE', 'পেমেন্ট তারিখ', 2),
+(266, 'PAYMENT_METHOD', 'পেমেন্ট পদ্ধতি', 2),
+(267, 'TRANSACTION_ID', 'ট্রানজেকশন আইডি', 2),
+(268, 'PAID_AMOUNT', 'পরিশোধের পরিমাণ', 2),
+(269, 'PAYMENT_STATUS', 'পেমেন্ট স্ট্যাটাস', 2),
+(270, 'INVOICE_NO', 'ইনভয়েস নম্বর', 2),
+(273, 'MENU_HOME', 'Home', 1),
+(274, 'MENU_ABOUT', 'About', 1),
+(275, 'MENU_SERVICE', 'Service', 1),
+(276, 'MENU_PAGES', 'Pages', 1),
+(277, 'MENU_PHOTO_GALLERY', 'Photo Gallery', 1),
+(278, 'MENU_VIDEO_GALLERY', 'Video Gallery', 1),
+(279, 'MENU_TEAM_MEMBERS', 'Team Members', 1),
+(280, 'MENU_FAQ', 'FAQ', 1),
+(281, 'MENU_SHOP', 'Shop', 1),
+(282, 'MENU_BLOG', 'Blog', 1),
+(283, 'MENU_CONTACT', 'Contact', 1),
+(284, 'MENU_HOME', 'হোম', 2),
+(285, 'MENU_ABOUT', 'সম্পর্কে', 2),
+(286, 'MENU_SERVICE', 'সার্ভিস', 2),
+(287, 'MENU_PAGES', 'পেজসমূহ', 2),
+(288, 'MENU_PHOTO_GALLERY', 'ফটো গ্যালারি', 2),
+(289, 'MENU_VIDEO_GALLERY', 'ভিডিও গ্যালারি', 2),
+(290, 'MENU_TEAM_MEMBERS', 'টিম এর সদস্যগণ', 2),
+(291, 'MENU_FAQ', 'প্রশ্নোত্তর', 2),
+(292, 'MENU_SHOP', 'দোকান', 2),
+(293, 'MENU_BLOG', 'ব্লগসমূহ', 2),
+(294, 'MENU_CONTACT', 'যোগাযোগ', 2),
+(295, 'PAGE_ABOUT', 'About Us', 1),
+(296, 'PAGE_ABOUT', 'আমাদের সম্পর্কে', 2),
+(297, 'THUMBNAIL', 'Thumbnail', 1),
+(298, 'THUMBNAIL', 'থাম্বনেইল', 2),
+(299, 'PRODUCT_NAME', 'Product Name', 1),
+(300, 'PRODUCT_NAME', 'প্রোডাক্টের নাম', 2),
+(301, 'UNIT_PRICE', 'Unit Price', 1),
+(302, 'UNIT_PRICE', 'ইউনিট প্রাইস', 2),
+(303, 'QUANTITY', 'Quantity', 1),
+(304, 'QUANTITY', 'পরিমাণ', 2),
+(305, 'SUBTOTAL', 'Subtotal', 1),
+(306, 'SUBTOTAL', 'সাবটোটাল', 2),
+(307, 'ARE_YOU_SURE', 'Are you sure?', 1),
+(308, 'ARE_YOU_SURE', 'আপনি কি নিশ্চিত?', 2),
+(309, 'UPDATE_CART', 'Update Cart', 1),
+(310, 'UPDATE_CART', 'কার্ট আপডেট করুন', 2),
+(311, 'CONTINUE_SHOPPING', 'Continue Shopping', 1),
+(312, 'CONTINUE_SHOPPING', 'শপিং চালিয়ে যান', 2),
+(313, 'CHECKOUT', 'Checkout', 1),
+(314, 'CHECKOUT', 'চেকআউট', 2),
+(315, 'COUPON', 'Coupon', 1),
+(316, 'COUPON', 'কুপন', 2),
+(317, 'HAVE_A_COUPON', 'Have a coupon?', 1),
+(318, 'HAVE_A_COUPON', 'কূপন প্রযোজ্য?', 2),
+(319, 'COUPON_CODE', 'Coupon Code', 1),
+(320, 'COUPON_CODE', 'কূপন কোড', 2),
+(321, 'APPLY_COUPON', 'Apply Coupon', 1),
+(322, 'APPLY_COUPON', 'কূপন দিন', 2),
+(325, 'APPLY_SHIPPING', 'Apply Shipping', 1),
+(326, 'APPLY_SHIPPING', 'শিপিং অ্যাপ্লাই করুন', 2),
+(327, 'CART_EMPTY', 'Cart is epmty', 1),
+(328, 'CART_EMPTY', 'কার্টে কোন আইটেম নাই', 2),
+(329, 'PRODUCT_PRICE', 'Product Price', 1),
+(330, 'PRODUCT_PRICE', 'প্রোডাক্টের মূল্য', 2),
+(331, 'ADD_TO_CART', 'Add to cart', 1),
+(332, 'ADD_TO_CART', 'কার্টে যোগ করুন', 2),
+(333, 'DESCRIPTION', 'Descrition', 1),
+(334, 'DESCRIPTION', 'বর্ণনা', 2),
+(335, 'RETURN_POLICY', 'Return Policy', 1),
+(336, 'RETURN_POLICY', 'ফেরতের নিয়মাবলী', 2),
+(337, 'TOTAL', 'Total', 1),
+(338, 'TOTAL', 'মোট', 2),
+(339, 'CART_DETAIL', 'Cart Details', 1),
+(340, 'CART_DETAIL', 'কার্টের বিস্তারিত', 2),
+(341, 'BILLING_INFORMATION', 'Billing Information', 1),
+(342, 'BILLING_INFORMATION', 'বিলিং এর তথ্য', 2),
+(343, 'SHIPPING_INFORMATION', 'Shipping Information', 1),
+(344, 'SHIPPING_INFORMATION', 'শিপিং এর তথ্য', 2),
+(345, 'BILLING_AND_SHIPPING_INFORMATION', 'Billing and Shipping Information', 1),
+(346, 'BILLING_AND_SHIPPING_INFORMATION', 'বিলিং এবং শিপিং এর তথ্য', 2),
+(347, 'ORDER_NOTES', 'Order Notes', 1),
+(348, 'ORDER_NOTES', 'অর্ডার নোট', 2),
+(349, 'FULL_NAME', 'Full Name', 1),
+(350, 'FULL_NAME', 'পুরো নাম', 2),
+(351, 'SELECT_COUNTRY', 'Select Country', 1),
+(352, 'SELECT_COUNTRY', 'দেশ নির্বাচন করুন', 2),
+(353, 'STATE', 'State', 1),
+(354, 'STATE', 'স্টেট', 2),
+(355, 'CITY', 'City', 1),
+(356, 'CITY', 'শহর', 2),
+(357, 'ZIP', 'Zip Code', 1),
+(358, 'ZIP', 'জিপ কোড', 2),
+(359, 'SHIP_TO_DIFFERENT', 'Ship to a different address?', 1),
+(360, 'SHIP_TO_DIFFERENT', 'অন্য ঠিকানায় শিপিং করতে চান?', 2),
+(361, 'RETURNING_CUSTOMER_CLICK_LOGIN', 'Returning Customer? Click here to login', 1),
+(362, 'RETURNING_CUSTOMER_CLICK_LOGIN', 'রিটার্নিং কাস্টোমার? তাহলে লগিন করুন।', 2),
+(363, 'CONTINUE_TO_PAYMENT', 'Continue to Payment', 1),
+(364, 'CONTINUE_TO_PAYMENT', 'পেমেন্ট পেজে যান', 2),
+(365, 'EXISTING_CUSTOMER', 'Existing Customer', 1),
+(366, 'EXISTING_CUSTOMER', 'বর্তমান কাস্টোমার', 2),
+(367, 'PAY_NOW', 'Pay Now', 1),
+(368, 'PAY_NOW', 'পে করুন', 2),
+(369, 'PAY_WITH_PAYPAL', 'Pay with PayPal', 1),
+(370, 'PAY_WITH_PAYPAL', 'PayPal দিয়ে পে করুন', 2),
+(371, 'PAY_WITH_STRIPE', 'Pay with Stripe', 1),
+(372, 'PAY_WITH_STRIPE', 'Stripe দিয়ে পে করুন', 2),
+(373, 'STOCK_AVAILABLE', 'Stock Available: ', 1),
+(374, 'STOCK_AVAILABLE', 'স্টকে যা আছেঃ ', 2),
+(375, 'FOOTER_COL_1_HEADING', 'Newsletter', 1),
+(376, 'FOOTER_COL_1_HEADING', 'নিউজলেটার', 2),
+(377, 'FOOTER_COL_2_HEADING', 'Recent Posts', 1),
+(378, 'FOOTER_COL_2_HEADING', 'সাম্প্রতিক পোষ্টসমূহ', 2),
+(379, 'FOOTER_COL_3_HEADING', 'Quick Links', 1),
+(380, 'FOOTER_COL_3_HEADING', 'প্রয়োজনীয় লিঙ্কগুলো', 2),
+(381, 'FOOTER_COL_4_HEADING', 'Address', 1),
+(382, 'FOOTER_COL_4_HEADING', 'ঠিকানা', 2),
+(383, 'FOOTER_COPYRIGHT', 'Copyright 2020, Company Name. All Rights Reserved.', 1),
+(384, 'FOOTER_COPYRIGHT', 'স্বত্ব © ২০২০। কোম্পানির নাম।', 2),
+(385, 'CALL_TO_ACTION_TEXT', 'Do you want to get high-quality service for your organization or business?', 1),
+(386, 'CALL_TO_ACTION_TEXT', 'আপনি কি আপনার ব্যবসার জন্য ভাল সার্ভিস পেতে আগ্রহী?', 2),
+(387, 'CALL_TO_ACTION_BUTTON_TEXT', 'Contact Us', 1),
+(388, 'CALL_TO_ACTION_BUTTON_TEXT', 'যোগাযোগ করুন', 2),
+(391, 'FOOTER_NEWSLETTER_TEXT', 'Detracto contentiones te est, brute ipsum consul an vis. Mea ei regione blandit ullamcorper, definiebas constituam vix ei.', 1),
+(392, 'FOOTER_NEWSLETTER_TEXT', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা।', 2),
+(393, 'FOOTER_ADDRESS', '3153 Foley Street Miami, \r\nFL 33176', 1),
+(394, 'FOOTER_ADDRESS', '৩১৫৩ ফলি স্ট্রীট, মিয়ামি,\r\nFL ৩৩১৭৬', 2),
+(395, 'FOOTER_PHONE', 'Sales: 954-648-1802\r\nSupport: 963-612-1782', 1),
+(396, 'FOOTER_PHONE', 'বিক্রয়: ৯৫৪-৬৪৮-১৮০২\r\nসাপোর্ট: ৯৬৩-৬১২-১৭৮২', 2),
+(397, 'FOOTER_EMAIL', 'sales@yourwebsite.com\r\nsupport@yourwebsite.com', 1),
+(398, 'FOOTER_EMAIL', 'sales@yourwebsite.com\r\nsupport@yourwebsite.com', 2),
+(399, 'SIDEBAR_BLOG_HEADING_CATEGORY', 'Categories', 1),
+(400, 'SIDEBAR_BLOG_HEADING_CATEGORY', 'সকল ক্যাটাগরিসমূহ', 2),
+(401, 'SIDEBAR_BLOG_HEADING_RECENT_BLOG', 'Recent Blogs', 1),
+(402, 'SIDEBAR_BLOG_HEADING_RECENT_BLOG', 'সাম্প্রতিক ব্লগসমূহ', 2),
+(403, 'SIDEBAR_SERVICE_HEADING_SERVICES', 'All Services', 1),
+(404, 'SIDEBAR_SERVICE_HEADING_SERVICES', 'সকল সার্ভিস', 2),
+(561, 'CUSTOMER_RESET_PASSWORD', 'Customer Reset Password', 1),
+(562, 'CUSTOMER_RESET_PASSWORD', 'কাস্টোমার পাসওয়ার্ড রিসেট', 2),
+(563, 'COUNTRY', 'Country', 1),
+(564, 'COUNTRY', 'দেশ', 2),
+(565, 'CUSTOMER_TYPE', 'Customer Type', 1),
+(566, 'CUSTOMER_TYPE', 'কাস্টোমারের ধরন', 2),
+(567, 'BANK_INFORMATION', 'Bank Information', 1),
+(568, 'BANK_INFORMATION', 'ব্যাংক এর তথ্য', 2),
+(569, 'PRODUCT_INFORMATION', 'Product Information', 1),
+(570, 'PRODUCT_INFORMATION', 'প্রোডাক্ট এর তথ্য', 2),
+(571, 'ORDER_DETAIL', 'Order Detail', 1),
+(572, 'ORDER_DETAIL', 'অর্ডার এর বিস্তারিত', 2),
+(573, 'PAYMENT_DATE_TIME', 'Payment Date and Time', 1),
+(574, 'PAYMENT_DATE_TIME', 'পেমেন্ট এর তারিখ এবং সময়', 2),
+(575, 'SHIPPING_COST', 'Shipping Cost', 1),
+(576, 'SHIPPING_COST', 'শিপিং এর কস্ট', 2),
+(577, 'COUPON_DISCOUNT', 'Coupon Discount', 1),
+(578, 'COUPON_DISCOUNT', 'কূপন ডিসকাউন্ট', 2),
+(579, 'ERROR_EXIST_EMAIL', 'Email address already exists!', 1),
+(580, 'ERROR_EXIST_EMAIL', 'ইমেইল ঠিকানাটি আলরেডী আছে', 2),
+(581, 'SUCCESS_CUSTOMER_REGISTRATION', 'Customer Registration is successful. Please check your email to verify and confirm the registration.', 1),
+(582, 'SUCCESS_CUSTOMER_REGISTRATION', 'রেজিস্ট্রেশন সফল হয়েছে। প্রসেসটি পুরা শেষ করার জন্য ইমেইল চেক করুন এবং ভেরিফাই করুন।', 2),
+(583, 'ERROR_EMPTY_ADDRESS', 'Address can not be empty!', 1),
+(584, 'ERROR_EMPTY_ADDRESS', 'ঠিকানা দিতে হবে।', 2),
+(585, 'ERROR_EMPTY_STATE', 'State can not be empty', 1),
+(586, 'ERROR_EMPTY_STATE', 'স্টেট দিতে হবে', 2),
+(587, 'ERROR_EMPTY_CITY', 'City can not be empty', 1),
+(588, 'ERROR_EMPTY_CITY', 'শহরের নাম দিতে হবে', 2),
+(589, 'ERROR_EMPTY_ZIP', 'Zip code can not be empty', 1),
+(590, 'ERROR_EMPTY_ZIP', 'জিপ কোড দিতে হবে', 2),
+(591, 'ERROR_NOT_FOUND_EMAIL', 'Email address is not found in our system!', 1),
+(592, 'ERROR_NOT_FOUND_EMAIL', 'আমাদের সিস্টেমে ইমেইল ঠিকানাটি পাওয়া যায়নি!', 2),
+(593, 'SUCCESS_FORGET_PASSWORD', 'Forget password request is sent successfully. Please check your email.', 1),
+(594, 'SUCCESS_FORGET_PASSWORD', 'আপনাকে একটা ইমেইল পাঠানো হয়েছে। আপনার ইমেইল চেক করুন।', 2),
+(595, 'ERROR_CUSTOMER_LOGIN', 'Email and/or Password Wrong', 1),
+(596, 'ERROR_CUSTOMER_LOGIN', 'ইমেইল এবং/অথবা পাসওয়ার্ড ভুল', 2),
+(597, 'SUCCESS_PRODUCT_ADD_CART', 'Product is added to the cart successfully!', 1),
+(598, 'SUCCESS_PRODUCT_ADD_CART', 'প্রোডাক্ট কার্টে সফলভাবে যোগ হয়েছে!', 2),
+(599, 'ERROR_PRODUCT_EXIST_CART', 'This product is already added to the shopping cart.', 1),
+(600, 'ERROR_PRODUCT_EXIST_CART', 'এই প্রোডাকটি আলরেডী কার্টে রয়েছে', 2),
+(601, 'ERROR_PRODUCT_OUT_OF_STOCK', 'Sorry! There are not sufficient item(s) in the stock', 1),
+(602, 'ERROR_PRODUCT_OUT_OF_STOCK', 'দুঃখিত! স্টকে পর্যাপ্ত আইটেম নাই', 2),
+(603, 'SUCCESS_DELETE_ITEM_FROM_CART', 'Item is deleted from the cart successfully!', 1),
+(604, 'SUCCESS_DELETE_ITEM_FROM_CART', 'কার্ট থেকে আইটেমটি সফলভাবে ডিলিট হয়েছে', 2),
+(605, 'SUCCESS_UPDATE_CART', 'Cart is updated successfully!', 1),
+(606, 'SUCCESS_UPDATE_CART', 'কার্ট সফলভাবে আপডেট হয়েছে!', 2),
+(607, 'ERROR_COUPON_CODE_NOT_FOUND', 'Coupon code is not found!', 1),
+(608, 'ERROR_COUPON_CODE_NOT_FOUND', 'কূপন কোডটি পাওয়া যায়নি', 2),
+(609, 'ERROR_COUPON_CODE_MAX_USED', 'Coupon is used maximum times already', 1),
+(610, 'ERROR_COUPON_CODE_MAX_USED', 'কূপন কোডটি সর্বোচ্চ বার ব্যবহার করা হয়েছে!', 2),
+(611, 'ERROR_COUPON_DATE_NOT_COME', 'Coupon date does not come yet', 1),
+(612, 'ERROR_COUPON_DATE_NOT_COME', 'কূপন প্রয়োগের তারিখ এখনো আসে নাই', 2),
+(613, 'ERROR_COUPON_DATE_EXPIRED', 'Coupon date is expired', 1),
+(614, 'ERROR_COUPON_DATE_EXPIRED', 'কূপন প্রয়োগের তারিখ চলে গিয়েছে', 2),
+(615, 'SUCCESS_COUPON_APPLIED', 'Coupon code is applied successfully!', 1),
+(616, 'SUCCESS_COUPON_APPLIED', 'কূপন কোড সঠিকভাবে প্রয়োগ করা হয়েছে', 2),
+(617, 'SUCCESS_SHIPPING_SELECTED', 'Shipping method is selected successfully!', 1),
+(618, 'SUCCESS_SHIPPING_SELECTED', 'শিপিং পদ্ধতি সঠিকভাবে নির্বাচন করা হয়েছে', 2),
+(619, 'ERROR_CUSTOMER_INACTIVE', 'Customer is not active', 1),
+(620, 'ERROR_CUSTOMER_INACTIVE', 'কাস্টোমার অ্যাক্টিভ নয়', 2),
+(621, 'ERROR_PASSWORD', 'Password is wrong', 1),
+(622, 'ERROR_PASSWORD', 'পাসওয়ার্ড ভুল', 2),
+(623, 'SUCCESS_CUSTOMER_LOGIN', 'Login is successful!', 1),
+(624, 'SUCCESS_CUSTOMER_LOGIN', 'লগিন সফল', 2),
+(625, 'ERROR_ALL_REQUIRED_FIELD', 'Please fill up all the required fields', 1),
+(626, 'ERROR_ALL_REQUIRED_FIELD', 'সকল প্রয়োজনীয় ফিল্ড পূরন করুন', 2),
+(627, 'PAYMENT', 'Payment', 1),
+(628, 'PAYMENT', 'পেমেন্ট', 2),
+(629, 'SUCCESS_SUBSCRIPTION_EMAIL_CHECK', 'Thank you for your interest to subscribe our newsletter! Please check your email address to finish the steps.', 1),
+(630, 'SUCCESS_SUBSCRIPTION_EMAIL_CHECK', 'আপনার ইন্টারেস্টের জন্য ধন্যবাদ। ইমেইল চেক করুন এবং নির্দেশনা ফলো করুন।', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_menu`
+--
+
+CREATE TABLE `tbl_menu` (
+  `menu_id` int(11) NOT NULL,
+  `menu_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `menu_status` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_menu`
+--
+
+INSERT INTO `tbl_menu` (`menu_id`, `menu_name`, `menu_status`) VALUES
+(1, 'Home', 'Show'),
+(2, 'About', 'Show'),
+(3, 'Service', 'Show'),
+(4, 'FAQ', 'Show'),
+(5, 'Photo Gallery', 'Show'),
+(6, 'Video Gallery', 'Show'),
+(7, 'Blog', 'Show'),
+(8, 'Contact', 'Show'),
+(9, 'Terms and Conditions', 'Show'),
+(10, 'Privacy Policy', 'Show'),
+(11, 'Team Members', 'Show'),
+(12, 'Shop', 'Show'),
+(13, 'Dynamic Pages', 'Show');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order`
+--
+
+CREATE TABLE `tbl_order` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `customer_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_phone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_country` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_address` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_state` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_city` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `billing_zip` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_phone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_country` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_address` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_state` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_city` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_zip` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `order_note` text COLLATE utf8_unicode_ci NOT NULL,
+  `payment_date_time` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `txnid` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_cost` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `coupon_code` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `coupon_discount` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `paid_amount` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `fee_amount` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `net_amount` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `card_number` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `card_cvc` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
+  `card_expiry_month` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `card_expiry_year` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `bank_information` text COLLATE utf8_unicode_ci NOT NULL,
+  `payment_method` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_status` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `order_no` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `tbl_order`
+--
+
+INSERT INTO `tbl_order` (`id`, `customer_id`, `customer_name`, `customer_email`, `customer_type`, `billing_name`, `billing_email`, `billing_phone`, `billing_country`, `billing_address`, `billing_state`, `billing_city`, `billing_zip`, `shipping_name`, `shipping_email`, `shipping_phone`, `shipping_country`, `shipping_address`, `shipping_state`, `shipping_city`, `shipping_zip`, `order_note`, `payment_date_time`, `txnid`, `shipping_cost`, `coupon_code`, `coupon_discount`, `paid_amount`, `fee_amount`, `net_amount`, `card_number`, `card_cvc`, `card_expiry_month`, `card_expiry_year`, `bank_information`, `payment_method`, `payment_status`, `order_no`) VALUES
+(2, 1, 'John Doe', 'arefin2k@gmail.com', 'Returning Customer', 'John Doe', 'arefin2k@gmail.com', '111-222-3333', 'United States', '4706 Romrog Way', 'NE', 'Kearney', '68847', 'John Doe', 'arefin2k@gmail.com', '111-222-3333', 'United States', '4706 Romrog Way', 'NE', 'Kearney', '68847', '', '2020-08-31 16:43:35', '3K367884AT640533R', '0', '', '0', '72', '2.39', '69.61', '', '', '', '', '', 'PayPal', 'Completed', '5f4d28b715bc2'),
+(3, 0, 'Asad', 'asad@gmail.com', 'Guest', 'Asad', 'asad@gmail.com', '1111', 'Argentina', 'aa', 'aa', 'aa', 'aa', 'Asad', 'asad@gmail.com', '1111', 'Argentina', 'aa', 'aa', 'aa', 'aa', 'Nice', '2020-09-08 18:46:51', 'txn_1HP9y5BoKopKik6AYGYW2BnV', '0', '', '0', '6', '0.47', '5.53', '4242424242424242', '112', '12', '22', '', 'Stripe', 'Completed', '5f57b57b89d11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order_detail`
+--
+
+CREATE TABLE `tbl_order_detail` (
+  `order_detail_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `product_price` float NOT NULL,
+  `product_qty` int(11) NOT NULL,
+  `payment_status` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `order_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_order_detail`
+--
+
+INSERT INTO `tbl_order_detail` (`order_detail_id`, `order_id`, `product_id`, `product_name`, `product_price`, `product_qty`, `payment_status`, `order_no`) VALUES
+(3, 2, 1, 'Product Name 1', 15, 2, 'Completed', '5f4d28b715bc2'),
+(4, 2, 2, 'Product Name 2', 14, 3, 'Completed', '5f4d28b715bc2'),
+(5, 3, 3, 'Product Name 3', 6, 1, 'Completed', '5f57b57b89d11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_about`
+--
+
+CREATE TABLE `tbl_page_about` (
+  `id` int(11) NOT NULL,
+  `about_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `about_content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_about`
+--
+
+INSERT INTO `tbl_page_about` (`id`, `about_heading`, `about_content`, `lang_id`) VALUES
+(1, 'About Us', '&lt;p&gt;Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.&lt;/p&gt;\r\n\r\n&lt;p&gt;Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.&lt;/p&gt;\r\n\r\n&lt;p&gt;Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Detracto contentiones te est, brute ipsum consul an vis. Mea ei regione blandit ullamcorper, definiebas constituam vix ei. At his ludus nonumes gloriatur. Ne vim tamquam nonumes.&lt;/p&gt;\r\n\r\n&lt;p&gt; &lt;/p&gt;\r\n', 1),
+(2, 'আমাদের সম্পর্কে', '&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n\r\n&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;br&gt;\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_blog`
+--
+
+CREATE TABLE `tbl_page_blog` (
+  `id` int(11) NOT NULL,
+  `blog_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_blog`
+--
+
+INSERT INTO `tbl_page_blog` (`id`, `blog_heading`, `lang_id`) VALUES
+(1, 'Blog', 1),
+(2, 'ব্লগসমূহ', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_contact`
+--
+
+CREATE TABLE `tbl_page_contact` (
+  `id` int(11) NOT NULL,
+  `contact_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `contact_address` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `contact_email` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `contact_phone` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_contact`
+--
+
+INSERT INTO `tbl_page_contact` (`id`, `contact_heading`, `contact_address`, `contact_email`, `contact_phone`, `lang_id`) VALUES
+(1, 'Contact', '3153 Foley Street\r\nMiami, FL 33176', 'sales@yourwebsite.com\r\nsupport@yourwebsite.com', 'Office 1: 954-648-1802\r\nOffice 2: 963-612-1782', 1),
+(2, 'যোগাযোগ', '৩১৫৩ ফলি স্ট্রীট,\r\nমিয়ামি, FL ৩৩১৭৬', 'sales@yourwebsite.com\r\nsupport@yourwebsite.com', 'অফিস ১: ৯৫৪-৬৪৮-১৮০২\r\nঅফিস ২: ৯৬৩-৬১২-১৭৮২', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_dynamic`
+--
+
+CREATE TABLE `tbl_page_dynamic` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `banner` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_dynamic`
+--
+
+INSERT INTO `tbl_page_dynamic` (`id`, `name`, `slug`, `content`, `banner`, `meta_title`, `meta_description`, `lang_id`) VALUES
+(1, 'Dynamic Page 1', 'dynamic-page-1', '<p>Lorem ipsum dolor sit amet, mutat rebum eirmod his et, an sed summo eligendi scriptorem. His ad mollis tritani iuvaret, rebum saepe deseruisse cum in, duo id quod vero. Id fabulas disputationi vim, mei augue oblique volumus cu. Vide habemus recteque per cu. Vide maiorum docendi mea cu, laoreet tincidunt eu sed. An est possim utamur, et eos illud offendit.</p>\r\n\r\n<p>Has ea diam essent, virtute definiebas est an, modo honestatis eam ex. Eius copiosae perfecto in pro. Putant verterem imperdiet ius in, veniam vulputate ei mea. Vim alia fabellas aliquando cu. Debet omnesque delicata et sed, per doming postulant no, qui ne inani ceteros perfecto.</p>\r\n', 'page-dynamic-banner-1.jpg', 'Dynamic Page 1', 'Dynamic Page 1', 1),
+(2, 'Dynamic Page 2', 'dynamic-page-2', '<p>Lorem ipsum dolor sit amet, mutat rebum eirmod his et, an sed summo eligendi scriptorem. His ad mollis tritani iuvaret, rebum saepe deseruisse cum in, duo id quod vero. Id fabulas disputationi vim, mei augue oblique volumus cu. Vide habemus recteque per cu. Vide maiorum docendi mea cu, laoreet tincidunt eu sed. An est possim utamur, et eos illud offendit.</p>\r\n\r\n<p>Has ea diam essent, virtute definiebas est an, modo honestatis eam ex. Eius copiosae perfecto in pro. Putant verterem imperdiet ius in, veniam vulputate ei mea. Vim alia fabellas aliquando cu. Debet omnesque delicata et sed, per doming postulant no, qui ne inani ceteros perfecto.</p>\r\n', 'page-dynamic-banner-2.jpg', 'Dynamic Page 2', 'Dynamic Page 2', 1),
+(3, 'ডায়নামিক পেজ ১', 'dynamic-page-1-bd', '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n\r\n<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 'page-dynamic-banner-3.jpg', 'ডায়নামিক পেজ ১', 'ডায়নামিক পেজ ১', 2),
+(4, 'ডায়নামিক পেজ ২', 'dynamic-page-2-bd', '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n\r\n<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 'page-dynamic-banner-4.jpg', 'ডায়নামিক পেজ ২', 'ডায়নামিক পেজ ২', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_faq`
+--
+
+CREATE TABLE `tbl_page_faq` (
+  `id` int(11) NOT NULL,
+  `faq_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_faq`
+--
+
+INSERT INTO `tbl_page_faq` (`id`, `faq_heading`, `lang_id`) VALUES
+(1, 'FAQ', 1),
+(2, 'প্রশ্নোত্তর', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_home`
+--
+
+CREATE TABLE `tbl_page_home` (
+  `id` int(11) NOT NULL,
+  `home_welcome_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_welcome_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_welcome_text` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `home_why_choose_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_why_choose_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_feature_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_feature_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_service_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_service_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_testimonial_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_testimonial_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_blog_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_blog_subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_home`
+--
+
+INSERT INTO `tbl_page_home` (`id`, `home_welcome_title`, `home_welcome_subtitle`, `home_welcome_text`, `home_why_choose_title`, `home_why_choose_subtitle`, `home_feature_title`, `home_feature_subtitle`, `home_service_title`, `home_service_subtitle`, `home_testimonial_title`, `home_testimonial_subtitle`, `home_blog_title`, `home_blog_subtitle`, `lang_id`) VALUES
+(1, 'Quality Services to Clients', 'We always try to make our clients happy', '&lt;p&gt;Lorem ipsum dolor sit amet, erat albucius et nam, eam no consul tacimates. An iisque dolorum gubergren duo. Nominavi repudiandae te eos, in accumsan omittantur vis. Tale illum ea mel, solum malorum reformidans ea eam.&lt;/p&gt;\r\n\r\n&lt;p&gt;Quot volumus cum no, commodo lucilius deserunt nam te. No diam erroribus concludaturque vim, forensibus omittantur ius an, te sed nullam doming nostrud. Habeo theophrastus sed no, agam oporteat duo eu. Sit ei reque erant movet. Liber mediocritatem te has, ad sea scriptorem scribentur.&lt;/p&gt;\r\n', 'WHY CHOOSE US', 'We have some special crieteria that will help you', 'SPECIAL FEATURES', 'We offer some awesome features that will help you', 'OUR SERVICES', 'We are always here to serve you some awesome services', 'HAPPY CUSTOMERS', 'See what our valuable clients tell about us', 'LATEST NEWS', 'All our latest news are listed below', 1),
+(2, 'ক্লায়েন্টদেরকে কোয়ালিটি সার্ভিস প্রদান করি', 'আমরা সর্বদা আমাদের ক্লায়েন্টদের খুশি করার চেষ্টা করি', '&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা।&lt;/p&gt;\r\n\r\n&lt;p&gt;তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n', 'আমাদের কেন পছন্দ করবেন', 'আমাদের কিছু গুন আছে যার জন্য আপনি আমাদের পছন্দ করবেন', 'স্পেশাল ফীচার', 'আমাদের দারুন কিছু ফীচার আছে যেগুলো আপনাদের সাহায্য করবে', 'আমাদের সার্ভিসসমূহ', 'আমরা সর্বদা ভাল মানের সার্ভিস দিয়ে থাকি', 'যারা আমাদের সার্ভিসে খুশি', 'আমাদের সার্ভিস সম্পর্কে আমাদের ক্লায়েন্টরা কি বলে তা দেখুন', 'সর্বশেষ ব্লগসমূহ', 'সর্বশেষ ব্লগ আইটেমগুলো এখান থেকে দেখুন', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_home_lang_independent`
+--
+
+CREATE TABLE `tbl_page_home_lang_independent` (
+  `id` int(11) NOT NULL,
+  `home_welcome_video` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `home_welcome_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_why_choose_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_feature_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_service_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_testimonial_photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `home_testimonial_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_blog_item` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `home_blog_status` varchar(5) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_home_lang_independent`
+--
+
+INSERT INTO `tbl_page_home_lang_independent` (`id`, `home_welcome_video`, `home_welcome_status`, `home_why_choose_status`, `home_feature_status`, `home_service_status`, `home_testimonial_photo`, `home_testimonial_status`, `home_blog_item`, `home_blog_status`) VALUES
+(1, '_39W4PIFCXA', 'Show', 'Show', 'Show', 'Show', 'home_testimonial_photo.jpg', 'Show', '10', 'Show');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_photo_gallery`
+--
+
+CREATE TABLE `tbl_page_photo_gallery` (
+  `id` int(11) NOT NULL,
+  `photo_gallery_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_photo_gallery`
+--
+
+INSERT INTO `tbl_page_photo_gallery` (`id`, `photo_gallery_heading`, `lang_id`) VALUES
+(1, 'Photo Gallery', 1),
+(2, 'ফটো গ্যালারি', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_privacy`
+--
+
+CREATE TABLE `tbl_page_privacy` (
+  `id` int(11) NOT NULL,
+  `privacy_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `privacy_content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_privacy`
+--
+
+INSERT INTO `tbl_page_privacy` (`id`, `privacy_heading`, `privacy_content`, `lang_id`) VALUES
+(1, 'Privacy Policy', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p><p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p><p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p><p>Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p><p>Detracto contentiones te est, brute ipsum consul an vis. Mea ei regione blandit ullamcorper, definiebas constituam vix ei. At his ludus nonumes gloriatur. Ne vim tamquam nonumes.</p><p>Duo purto pertinax in. Ea noluisse mediocrem qui, nobis melius vis et. Iudico delicatissimi no qui, quando fastidii nam et, ne eum rationibus deseruisse neglegentur. Ei eum populo viderer reprimique, tantas homero abhorreant usu ei, at postulant gloriatur vituperata sit.</p>', 1),
+(2, 'গোপনীয় নীতিমালা', '&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_service`
+--
+
+CREATE TABLE `tbl_page_service` (
+  `id` int(11) NOT NULL,
+  `service_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_service`
+--
+
+INSERT INTO `tbl_page_service` (`id`, `service_heading`, `lang_id`) VALUES
+(1, 'Our Services', 1),
+(2, 'সার্ভিসগুলো', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_shop`
+--
+
+CREATE TABLE `tbl_page_shop` (
+  `id` int(11) NOT NULL,
+  `shop_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_shop`
+--
+
+INSERT INTO `tbl_page_shop` (`id`, `shop_heading`, `lang_id`) VALUES
+(1, 'Shop', 1),
+(2, 'শপ', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_team_member`
+--
+
+CREATE TABLE `tbl_page_team_member` (
+  `id` int(11) NOT NULL,
+  `team_member_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_team_member`
+--
+
+INSERT INTO `tbl_page_team_member` (`id`, `team_member_heading`, `lang_id`) VALUES
+(1, 'Team Members', 1),
+(2, 'টিম এর সদস্যগণ', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_term`
+--
+
+CREATE TABLE `tbl_page_term` (
+  `id` int(11) NOT NULL,
+  `term_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `term_content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_term`
+--
+
+INSERT INTO `tbl_page_term` (`id`, `term_heading`, `term_content`, `lang_id`) VALUES
+(1, 'Terms and Conditions', '&lt;p&gt;Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.&lt;/p&gt;\r\n\r\n&lt;p&gt;Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.&lt;/p&gt;\r\n\r\n&lt;p&gt;Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Detracto contentiones te est, brute ipsum consul an vis. Mea ei regione blandit ullamcorper, definiebas constituam vix ei. At his ludus nonumes gloriatur. Ne vim tamquam nonumes.&lt;/p&gt;\r\n\r\n&lt;p&gt;Duo purto pertinax in. Ea noluisse mediocrem qui, nobis melius vis et. Iudico delicatissimi no qui, quando fastidii nam et, ne eum rationibus deseruisse neglegentur. Ei eum populo viderer reprimique, tantas homero abhorreant usu ei, at postulant gloriatur vituperata sit.&lt;/p&gt;\r\n', 1),
+(2, 'শর্ত সমূহ', '&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_page_video_gallery`
+--
+
+CREATE TABLE `tbl_page_video_gallery` (
+  `id` int(11) NOT NULL,
+  `video_gallery_heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_page_video_gallery`
+--
+
+INSERT INTO `tbl_page_video_gallery` (`id`, `video_gallery_heading`, `lang_id`) VALUES
+(1, 'Video Gallery', 1),
+(2, 'ভিডিও গ্যালারি', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_photo`
+--
+
+CREATE TABLE `tbl_photo` (
+  `photo_id` int(11) NOT NULL,
+  `photo_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `photo_caption` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_photo`
+--
+
+INSERT INTO `tbl_photo` (`photo_id`, `photo_name`, `photo_caption`, `lang_id`) VALUES
+(2, 'photo-2.jpg', 'Photo Name 1', 1),
+(3, 'photo-3.jpg', 'Photo Name 2', 1),
+(4, 'photo-4.jpg', 'Photo Name 3', 1),
+(5, 'photo-5.jpg', 'Photo Name 4', 1),
+(6, 'photo-6.jpg', 'Photo Name 5', 1),
+(7, 'photo-7.jpg', 'Photo Name 6', 1),
+(8, 'photo-8.jpg', 'Photo Name 7', 1),
+(9, 'photo-9.jpg', 'Photo Name 8', 1),
+(10, 'photo-10.jpg', 'Photo Name 9', 1),
+(11, 'photo-11.jpg', 'ছবি ১', 2),
+(13, 'photo-13.jpg', 'ছবি ২', 2),
+(14, 'photo-14.jpg', 'ছবি ৩', 2),
+(15, 'photo-15.jpg', 'ছবি ৪', 2),
+(16, 'photo-16.jpg', 'ছবি ৫', 2),
+(17, 'photo-17.jpg', 'ছবি ৬', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_product`
+--
+
+CREATE TABLE `tbl_product` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `product_slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `product_old_price` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `product_current_price` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `product_stock` int(11) NOT NULL,
+  `product_content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `product_content_short` text COLLATE utf8_unicode_ci NOT NULL,
+  `product_return_policy` text COLLATE utf8_unicode_ci NOT NULL,
+  `product_featured_photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `product_order` int(11) NOT NULL,
+  `product_category_id` int(11) NOT NULL,
+  `meta_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `meta_description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`product_id`, `product_name`, `product_slug`, `product_old_price`, `product_current_price`, `product_stock`, `product_content`, `product_content_short`, `product_return_policy`, `product_featured_photo`, `product_order`, `product_category_id`, `meta_title`, `meta_description`, `lang_id`) VALUES
+(1, 'Product Name 1', 'product-name-1', '20', '15', 50, '<p>Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.</p>\r\n\r\n<p>No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.</p>\r\n\r\n<p>Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.</p>\r\n', 'Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et.', '&lt;p&gt;Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.&lt;/p&gt;\r\n\r\n&lt;p&gt;No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.&lt;/p&gt;\r\n', 'product-1.jpg', 1, 1, 'Product Name 1', '', 1),
+(2, 'Product Name 2', 'product-name-2', '18', '14', 80, '<p>Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.</p>\r\n\r\n<p>No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.</p>\r\n\r\n<p>Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.</p>\r\n', 'Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. ', '&lt;p&gt;Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.&lt;/p&gt;\r\n\r\n&lt;p&gt;No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.&lt;/p&gt;\r\n', 'product-2.jpg', 2, 1, 'Product Name 2', '', 1),
+(3, 'Product Name 3', 'product-name-3', '12', '6', 34, '<p>Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.</p>\r\n\r\n<p>No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.</p>\r\n\r\n<p>Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.</p>\r\n', 'Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. ', '&lt;p&gt;Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.&lt;/p&gt;\r\n\r\n&lt;p&gt;No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.&lt;/p&gt;\r\n', 'product-3.jpg', 3, 1, 'Product Name 3', '', 1),
+(4, 'Product Name 4', 'product-name-4', '32', '22', 40, '<p>Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.</p>\r\n\r\n<p>No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.</p>\r\n\r\n<p>Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.</p>\r\n', 'Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. ', '&lt;p&gt;Lorem ipsum dolor sit amet, minim detracto nec te, sit probo everti adipiscing ex, at singulis prodesset nec. Quo eu illud mundi delectus. Nec an laoreet forensibus, error laboramus ius ei. In vis vide facilis, usu et omnes iudico consul, inani summo latine vim et. Quo id tollit scaevola persecuti, duo sanctus oportere at. Eum id dicit electram. Eu vix erant appetere expetenda, debet latine at mea.&lt;/p&gt;\r\n\r\n&lt;p&gt;No eos idque detracto, eu ferri eirmod persius sit, ut mel quod epicuri reprimique. No est malorum apeirian probatus. Graeco constituto vim ea, ne ius voluptaria honestatis. Case reque noster eam ut, duo te vero vocibus volumus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ius ea utamur lucilius gubergren, te oratio quidam hendrerit pro. Sit ex erant quaeque adipiscing, summo mucius appareat pro et, sit ei abhorreant voluptatum liberavisse. Duo cu erant sonet voluptatibus. Ad minim accusamus corrumpit vim, an per eirmod alienum. Eius aperiri sit no, ex mea habeo dicta regione, nec essent adolescens ut. Ne doctus delicatissimi has, id ignota equidem maiestatis eum, denique epicurei apeirian pro et.&lt;/p&gt;\r\n', 'product-4.jpg', 4, 2, 'Product Name 4', '', 1),
+(5, 'প্রোডাক্টের নাম ৩', 'product-name-3-bn', '28', '18', 33, '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n\r\n<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও।', '&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n', 'product-5.jpg', 5, 2, 'প্রোডাক্টের নাম ৩', '', 2),
+(6, 'প্রোডাক্টের নাম ২', 'product-name-2-bn', '120', '100', 20, '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n\r\n<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও।', '&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;/p&gt;\r\n\r\n&lt;p&gt;অর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', 'product-6.jpg', 6, 3, 'প্রোডাক্টের নাম ২', '', 2),
+(7, 'প্রোডাক্টের নাম ১', 'product-name-1-bn', '130', '110', 16, '<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n\r\n<p>কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।</p>\r\n', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও।', '&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;/p&gt;\r\n\r\n&lt;p&gt;অর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', 'product-7.jpg', 7, 3, 'প্রোডাক্টের নাম ১', '', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_seo`
+--
+
+CREATE TABLE `tbl_seo` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `keyword` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_seo`
+--
+
+INSERT INTO `tbl_seo` (`id`, `title`, `keyword`, `description`) VALUES
+(1, 'BizPlus - Creative Business and Agency Management CMS', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_service`
+--
+
+CREATE TABLE `tbl_service` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `short_description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_service`
+--
+
+INSERT INTO `tbl_service` (`id`, `name`, `slug`, `description`, `short_description`, `photo`, `lang_id`) VALUES
+(1, 'Accounting and Finance', 'accounting-and-finance', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-1.jpg', 1),
+(2, 'Cloud Computing', 'cloud-computing', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-2.jpg', 1),
+(3, 'Manufacturing Service', 'manufacturing-service', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-3.jpg', 1),
+(4, 'Business Process', 'business-process', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-4.jpg', 1),
+(5, 'Backup Service', 'backup-service', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-5.jpg', 1),
+(6, 'Education &amp; Non-profit', 'education-amp-non-profit', '<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>\r\n\r\n<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>\r\n\r\n<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum. Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.</p>\r\n', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.', 'service-6.jpg', 1),
+(7, 'অ্যাকাউন্টিং এবং ফাইন্যান্স', 'accounting-and-finance-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', 'service-7.jpg', 2),
+(8, 'ক্লাউড কম্পিউটিং', 'cloud-computing-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', 'service-8.jpg', 2),
+(9, 'বিজনেস প্রসেস', 'business-process-bn', '<p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?</p>\r\n\r\n<p>যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।</p>\r\n', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', 'service-9.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_settings`
+--
+
+CREATE TABLE `tbl_settings` (
+  `id` int(11) NOT NULL,
+  `logo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `favicon` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `footer_recent_blog_item` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `cta_button_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `cta_status` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `cta_background` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `top_bar_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `top_bar_phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `send_email_from` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `receive_email_to` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `smtp_active` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
+  `smtp_secured` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
+  `smtp_host` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `smtp_port` int(11) NOT NULL,
+  `smtp_username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `smtp_password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_about` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_faq` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_service` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_testimonial` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_blog` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_contact` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_terms` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_privacy` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_team_member` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_verify_subscriber` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_photo_gallery` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_video_gallery` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_shop` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `banner_customer_section` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `front_end_color` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `sidebar_total_recent_blog` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `sidebar_total_upcoming_event` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `sidebar_total_past_event` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `sidebar_service_heading_service` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `paypal_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `stripe_public_key` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `stripe_secret_key` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `website_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_settings`
+--
+
+INSERT INTO `tbl_settings` (`id`, `logo`, `favicon`, `footer_recent_blog_item`, `cta_button_url`, `cta_status`, `cta_background`, `top_bar_email`, `top_bar_phone`, `send_email_from`, `receive_email_to`, `smtp_active`, `smtp_secured`, `smtp_host`, `smtp_port`, `smtp_username`, `smtp_password`, `banner_about`, `banner_faq`, `banner_service`, `banner_testimonial`, `banner_blog`, `banner_contact`, `banner_terms`, `banner_privacy`, `banner_team_member`, `banner_verify_subscriber`, `banner_photo_gallery`, `banner_video_gallery`, `banner_shop`, `banner_customer_section`, `front_end_color`, `sidebar_total_recent_blog`, `sidebar_total_upcoming_event`, `sidebar_total_past_event`, `sidebar_service_heading_service`, `paypal_email`, `stripe_public_key`, `stripe_secret_key`, `website_name`) VALUES
+(1, 'logo.png', 'favicon.png', '4', '#', 'Show', 'cta_background.jpg', 'info@yourwebsite.com', '954-648-1802', 'contact@yourwebsite.com', 'youremail@gmail.com', 'Yes', 'Yes', 'smtp_host', 465, 'smtp_username', 'smtp_password', 'banner_about.jpg', 'banner_faq.jpg', 'banner_service.jpg', 'banner_testimonial.jpg', 'banner_blog.jpg', 'banner_contact.jpg', 'banner_terms.jpg', 'banner_privacy.jpg', 'banner_team_member.jpg', 'banner_verify_subscriber.jpg', 'banner_photo_gallery.jpg', 'banner_video_gallery.jpg', 'banner_shop.jpg', 'banner_customer_section.jpg', '05C46B', '3', '5', '5', 'OUR SERVICES', 'servixo@biz.com', 'pk_test_0SwMWadgu8DwmEcPdUPRsZ7b', 'sk_test_TFcsLJ7xxUtpALbDo1L5c1PN', 'BizPlus');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_shipping`
+--
+
+CREATE TABLE `tbl_shipping` (
+  `shipping_id` int(11) NOT NULL,
+  `shipping_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_text` text COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_cost` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_order` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_shipping`
+--
+
+INSERT INTO `tbl_shipping` (`shipping_id`, `shipping_name`, `shipping_text`, `shipping_cost`, `shipping_order`) VALUES
+(1, 'Free Shipping', 'Shipment will be within 10-15 Days', '0', 1),
+(2, 'Same day delivery', 'Shipment will be within 1 Day.', '20', 4),
+(3, '2-Day Shipping', 'Shipment will be within 2 Days.', '10', 3),
+(4, 'Standard Shipping', 'Shipment will be within 5-10 Day.', '5', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_slider`
+--
+
+CREATE TABLE `tbl_slider` (
+  `id` int(11) NOT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `button_text` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `button_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `position` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_slider`
+--
+
+INSERT INTO `tbl_slider` (`id`, `photo`, `heading`, `content`, `button_text`, `button_url`, `position`, `lang_id`) VALUES
+(1, 'slider-1.jpg', 'Welcome To The Best Creative Agency', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit.', 'Read More', '#', 'Left', 1),
+(2, 'slider-2.jpg', 'We Provide Quality Service To Our Clients', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit.', 'Read More', '#', 'Left', 1),
+(3, 'slider-3.jpg', 'আমাদের কোম্পানিতে আপনাকে স্বাগতম', 'অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। ', 'আরো পড়ুন', '#', 'Left', 2),
+(4, 'slider-4.jpg', 'আমরা ক্লায়েটদের সবচেয়ে ভাল সার্ভিস দেই', 'মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। ', 'আরো দেখুন', '#', 'Left', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_social`
+--
+
+CREATE TABLE `tbl_social` (
+  `social_id` int(11) NOT NULL,
+  `social_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `social_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `social_icon` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_social`
+--
+
+INSERT INTO `tbl_social` (`social_id`, `social_name`, `social_url`, `social_icon`) VALUES
+(1, 'Facebook', 'http://www.facebook.com', 'fa fa-facebook'),
+(2, 'Twitter', 'http://www.twitter.com', 'fa fa-twitter'),
+(3, 'LinkedIn', 'http://www.linkedin.com', 'fa fa-linkedin'),
+(4, 'Google Plus', '', 'fa fa-google-plus'),
+(5, 'Pinterest', 'http://www.pinterest.com', 'fa fa-pinterest'),
+(6, 'YouTube', 'http://www.youtube.com', 'fa fa-youtube'),
+(7, 'Instagram', '', 'fa fa-instagram'),
+(8, 'Tumblr', '', 'fa fa-tumblr'),
+(9, 'Flickr', '', 'fa fa-flickr'),
+(10, 'Reddit', '', 'fa fa-reddit'),
+(11, 'Snapchat', '', 'fa fa-snapchat'),
+(12, 'WhatsApp', '', 'fa fa-whatsapp'),
+(13, 'Quora', '', 'fa fa-quora'),
+(14, 'StumbleUpon', '', 'fa fa-stumbleupon'),
+(15, 'Delicious', '', 'fa fa-delicious'),
+(16, 'Digg', '', 'fa fa-digg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_subscriber`
+--
+
+CREATE TABLE `tbl_subscriber` (
+  `subs_id` int(11) NOT NULL,
+  `subs_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `subs_date` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `subs_date_time` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `subs_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `subs_active` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_subscriber`
+--
+
+INSERT INTO `tbl_subscriber` (`subs_id`, `subs_email`, `subs_date`, `subs_date_time`, `subs_hash`, `subs_active`) VALUES
+(1, 'test1@gmail.com', '2019-06-05', '2019-06-05 21:26:44', '', 1),
+(2, 'test2@gmail.com', '2019-09-04', '2019-09-04 06:08:38', '', 1),
+(4, 'fsfdsf@dsa.sdf', '2020-08-27', '2020-08-27 11:42:34', '2d83ff52562789da024c38b0238adf30257fe6ed155d73396543c3e8bb900983', 0),
+(5, 'aa@gmail.com', '2020-09-06', '2020-09-06 16:16:49', '715a786c7b1fa3704d80c7f527c30d81d77b90cbed1f434232ae496d38da65d7', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_team_member`
+--
+
+CREATE TABLE `tbl_team_member` (
+  `team_member_id` int(11) NOT NULL,
+  `team_member_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_designation` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_detail` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_facebook` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_twitter` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_linkedin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_youtube` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_google_plus` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_flickr` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_phone` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `team_member_website` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_team_member`
+--
+
+INSERT INTO `tbl_team_member` (`team_member_id`, `team_member_name`, `team_member_slug`, `team_member_designation`, `team_member_photo`, `team_member_detail`, `team_member_facebook`, `team_member_twitter`, `team_member_linkedin`, `team_member_youtube`, `team_member_google_plus`, `team_member_instagram`, `team_member_flickr`, `team_member_phone`, `team_member_email`, `team_member_website`, `lang_id`) VALUES
+(1, 'Lan Porter', 'lan-porter', 'Chairman', 'team-member-1.jpg', '', '#', '#', '#', '', '', '', '', '111-222-3331', 'member1@gmail.com', '', 1),
+(2, 'Dennis Johnsen', 'dennis-johnsen', 'Managing Director', 'team-member-2.jpg', '&lt;p&gt;Lorem ipsum dolor sit amet, ea eos viderer electram quaerendum, id eam mundi oblique docendi. Ex per dicta vitae persius, volumus suavitate elaboraret eos in. Fugit quaeque suavitate qui an, no discere noluisse sea. At vim sanctus scaevola consetetur, ius falli appellantur ad. Per virtute inermis neglegentur cu. Eius meis voluptua te nec, ne eam aperiam accommodare complectitur.&lt;/p&gt;\r\n\r\n&lt;p&gt;Cu dicat partem verterem mel. Integre repudiandae nam ea, nam corpora salutatus ea, laudem neglegentur nam no. Ne alii nominati assentior mei, has decore molestie cu, ea pri oportere consetetur. Ex virtute complectitur eum, vel facilis efficiantur concludaturque ne, ad mea graeco nostro. In alia stet definiebas sed, soluta reprimique nec cu.&lt;/p&gt;\r\n\r\n&lt;p&gt;Melius pertinax pri id, ea mea alterum scripserit, ipsum officiis evertitur et sed. Eu qui lorem eirmod, vix odio tacimates in, mei cu phaedrum deserunt theophrastus. Duo ex elit iriure intellegam, eos quis indoctum definitiones eu, ex vix quaeque eligendi accommodare. Enim recteque gloriatur cu qui. Qui sint honestatis ullamcorper te, in vim suas esse eius, per an equidem habemus ancillae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Eu assum soluta ancillae per, pri ut mutat errem homero, no eum eros argumentum. Congue civibus accusam ei qui, mei harum labore vidisse no. Ei utinam legere periculis eam, vide ponderum interpretaris ei quo. Ad duo paulo nihil laoreet, ea per delectus expetendis. Dicam platonem periculis eos in, dicat nihil conceptam est ut.&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3332', 'member2@gmail.com', '', 1),
+(3, 'Pat Henderson', 'pat-henderson', 'Chief Operating Officer', 'team-member-3.jpg', '&lt;p&gt;Lorem ipsum dolor sit amet, ea eos viderer electram quaerendum, id eam mundi oblique docendi. Ex per dicta vitae persius, volumus suavitate elaboraret eos in. Fugit quaeque suavitate qui an, no discere noluisse sea. At vim sanctus scaevola consetetur, ius falli appellantur ad. Per virtute inermis neglegentur cu. Eius meis voluptua te nec, ne eam aperiam accommodare complectitur.&lt;/p&gt;\r\n\r\n&lt;p&gt;Cu dicat partem verterem mel. Integre repudiandae nam ea, nam corpora salutatus ea, laudem neglegentur nam no. Ne alii nominati assentior mei, has decore molestie cu, ea pri oportere consetetur. Ex virtute complectitur eum, vel facilis efficiantur concludaturque ne, ad mea graeco nostro. In alia stet definiebas sed, soluta reprimique nec cu.&lt;/p&gt;\r\n\r\n&lt;p&gt;Melius pertinax pri id, ea mea alterum scripserit, ipsum officiis evertitur et sed. Eu qui lorem eirmod, vix odio tacimates in, mei cu phaedrum deserunt theophrastus. Duo ex elit iriure intellegam, eos quis indoctum definitiones eu, ex vix quaeque eligendi accommodare. Enim recteque gloriatur cu qui. Qui sint honestatis ullamcorper te, in vim suas esse eius, per an equidem habemus ancillae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Eu assum soluta ancillae per, pri ut mutat errem homero, no eum eros argumentum. Congue civibus accusam ei qui, mei harum labore vidisse no. Ei utinam legere periculis eam, vide ponderum interpretaris ei quo. Ad duo paulo nihil laoreet, ea per delectus expetendis. Dicam platonem periculis eos in, dicat nihil conceptam est ut.&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3333', 'member3@gmail.com', '', 1),
+(4, 'Stevie Case', 'stevie-case', 'Chief Managing Officer', 'team-member-4.jpg', '&lt;p&gt;Lorem ipsum dolor sit amet, ea eos viderer electram quaerendum, id eam mundi oblique docendi. Ex per dicta vitae persius, volumus suavitate elaboraret eos in. Fugit quaeque suavitate qui an, no discere noluisse sea. At vim sanctus scaevola consetetur, ius falli appellantur ad. Per virtute inermis neglegentur cu. Eius meis voluptua te nec, ne eam aperiam accommodare complectitur.&lt;/p&gt;\r\n\r\n&lt;p&gt;Cu dicat partem verterem mel. Integre repudiandae nam ea, nam corpora salutatus ea, laudem neglegentur nam no. Ne alii nominati assentior mei, has decore molestie cu, ea pri oportere consetetur. Ex virtute complectitur eum, vel facilis efficiantur concludaturque ne, ad mea graeco nostro. In alia stet definiebas sed, soluta reprimique nec cu.&lt;/p&gt;\r\n\r\n&lt;p&gt;Melius pertinax pri id, ea mea alterum scripserit, ipsum officiis evertitur et sed. Eu qui lorem eirmod, vix odio tacimates in, mei cu phaedrum deserunt theophrastus. Duo ex elit iriure intellegam, eos quis indoctum definitiones eu, ex vix quaeque eligendi accommodare. Enim recteque gloriatur cu qui. Qui sint honestatis ullamcorper te, in vim suas esse eius, per an equidem habemus ancillae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Eu assum soluta ancillae per, pri ut mutat errem homero, no eum eros argumentum. Congue civibus accusam ei qui, mei harum labore vidisse no. Ei utinam legere periculis eam, vide ponderum interpretaris ei quo. Ad duo paulo nihil laoreet, ea per delectus expetendis. Dicam platonem periculis eos in, dicat nihil conceptam est ut.&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3334', 'member4@gmail.com', '', 1),
+(11, 'ল্যান পোর্টার', 'lan-porter-bn', 'চেয়ারম্যান', 'team-member-11.jpg', '&lt;p&gt;অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?&lt;/p&gt;\r\n\r\n&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n\r\n&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;br&gt;\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3331', 'member11@gmail.com', '', 2),
+(12, 'ডেনিস জনসন', 'dennis-johnson-bn', 'এম ডি', 'team-member-12.jpg', '&lt;p&gt;অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?&lt;/p&gt;\r\n\r\n&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n\r\n&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;br&gt;\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3331', 'member22@gmail.com', '', 2),
+(13, 'প্যাট হেন্ডারসন', 'pat-henderson-bn', 'প্রধান অপারেটিং অফিসার', 'team-member-13.jpg', '&lt;p&gt;অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?&lt;/p&gt;\r\n\r\n&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n\r\n&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;br&gt;\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3331', 'member33@gmail.com', '', 2),
+(14, 'স্টিভ কেস', 'steve-case-bn', 'ফিন্যান্স অফিসার', 'team-member-14.jpg', '&lt;p&gt;অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা তৈরি করতে পারে, যদি তুমি সেখানে অর্থদ্যোতনা দেখতে পাও। …ছিদ্রান্বেষণ? না, তা হবে কেন?&lt;/p&gt;\r\n\r\n&lt;p&gt;যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। তুমি যদি নিশ্চিত হও যে, তুমি কোনো মোহাচ্ছাদিত আবহে আবিষ্ট হয়ে অন্যের শেখানো বুলি আত্মস্থ করছো না, তাহলে তুমি নির্ভয়ে, নিশ্চিন্তে অগ্রসর হও। তুমি সেই কথাকে জানো, বুঝো, আত্মস্থ করো; মনে রাখবে, যা অনুসরণ করতে চলেছো, তা আগে অনুধাবন করা জরুরি; এখানে কিংকর্তব্যবিমূঢ় হবার কোনো সুযোগ নেই।&lt;/p&gt;\r\n\r\n&lt;p&gt;কোনো কথা শোনামাত্রই কি তুমি তা বিশ্বাস করবে? হয়তো বলবে, করবে, হয়তো বলবে “আমি করবো না।” হ্যা, “আমি করবো না” বললেই সবকিছু অস্বীকার করা যায় না, হয়তো তুমি মনের গহীন গভীর থেকে ঠিকই বিশ্বাস করতে শুরু করেছো সেই কথাটি, কিন্তু মুখে অস্বীকার করছো। তাই সচেতন থাকো, তুমি কী ভাবছো — তার প্রতি; সচেতন থাকো, তুমি কি আসলেই বিশ্বাস করতে চলেছো ঐ কথাটি… শুধু এতটুকু বলি, যা-ই বিশ্বাস করো না কেন, আগে যাচাই করে নাও; আর এতে চাই তোমার প্রত্যুৎপন্নমতিত্ব।&lt;/p&gt;\r\n\r\n&lt;p&gt;তাই কোন কথাটি কাজে লাগবে, তা নির্ধারণ করবে তুমি — হ্যাঁ, তুমি। হয়তো সামান্য ক’টা বাংলা অক্ষর: খন্ড-ত, অনুস্বার, বিঃসর্গ কিংবা চন্দ্রবিন্দু — কিন্তু যদি তুমি বিশ্বাস করো, তাহলে হয়তো তুমি তা দিয়েই তৈরি করতে পারো এক উচ্চমার্গীয় মহাকাব্য- এক চিরসবুজ অর্ঘ্য। রচিত হতে পারে পৃথিবীর ১ম বিরাম চিহ্নের ইতিকথা — এক নতুন ঊষা। …মহাকাব্য লিখতে ঋষি-মুনি হওয়া লাগে না।&lt;br&gt;\r\nঅর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!&lt;/p&gt;\r\n', '#', '#', '#', '', '', '', '', '111-222-3331', 'member44@gmail.com', '', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_testimonial`
+--
+
+CREATE TABLE `tbl_testimonial` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `designation` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `comment` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_testimonial`
+--
+
+INSERT INTO `tbl_testimonial` (`id`, `name`, `designation`, `photo`, `comment`, `lang_id`) VALUES
+(2, 'Robert Krol', 'CEO, ABC Company', 'testimonial-2.jpg', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens.', 1),
+(3, 'Sal Harvey', 'Director, DEF Company', 'testimonial-3.jpg', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens.', 1),
+(4, 'Terry Spain', 'Founder, XYZ Company', 'testimonial-4.jpg', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens.', 1),
+(5, 'জন হিল্টন', 'সিইও, এম কোম্পানি', 'testimonial-5.jpg', 'আমি এই কোম্পানির সার্ভিস ব্যবহার করেছি। তাদের ব্যবহার এবং সার্ভিস অসাধারণ। আমি সবাইকে বলবো যে তাদের সার্ভিস নিশ্চিন্তে ব্যবহার করতে পারেন।', 2),
+(6, 'অর্থার কক্স', 'চেয়ারম্যান, আর আর কোম্পানি', 'testimonial-6.jpg', 'আমি এই কোম্পানির সার্ভিস ব্যবহার করেছি। তাদের ব্যবহার এবং সার্ভিস অসাধারণ। আমি সবাইকে বলবো যে তাদের সার্ভিস নিশ্চিন্তে ব্যবহার করতে পারেন।', 2),
+(7, 'ডেভিড ম্যুর', 'ম্যানেজার, বিগ বস কোম্পানি', 'testimonial-7.jpg', 'আমি এই কোম্পানির সার্ভিস ব্যবহার করেছি। তাদের ব্যবহার এবং সার্ভিস অসাধারণ। আমি সবাইকে বলবো যে তাদের সার্ভিস নিশ্চিন্তে ব্যবহার করতে পারেন।', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user`
+--
+
+CREATE TABLE `tbl_user` (
+  `id` int(10) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `role` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `status` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`id`, `email`, `password`, `photo`, `token`, `role`, `status`) VALUES
+(1, 'admin@gmail.com', '$2y$10$0umx1fAmlAINY1e1lNvXaeNiOoUS0N9sQx.2/6tfZqyzzSHFxA2kq', 'user-.jpg', '', 'Admin', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_video`
+--
+
+CREATE TABLE `tbl_video` (
+  `video_id` int(11) NOT NULL,
+  `video_type` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `video_code` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `video_caption` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_video`
+--
+
+INSERT INTO `tbl_video` (`video_id`, `video_type`, `video_code`, `video_caption`, `lang_id`) VALUES
+(1, 'YouTube', 'G0dzLanYW1E', 'Business Caption 1', 1),
+(2, 'YouTube', 'ziA3LOerd74', 'Business Caption 2', 1),
+(4, 'YouTube', 'G0dzLanYW1E', 'ব্যবসায়িক ভিডিও ১', 2),
+(5, 'YouTube', 'ziA3LOerd74', 'ব্যবসায়িক ভিডিও ২', 2),
+(6, 'YouTube', '75TWb1rcdUc', 'Business Caption 3', 1),
+(7, 'YouTube', '75TWb1rcdUc', 'ব্যবসায়িক ভিডিও ৩', 2),
+(8, 'Vimeo', '139518874', 'Business Caption 4', 1),
+(9, 'Vimeo', '30132551', 'Business Caption 5', 1),
+(10, 'Vimeo', '127128273', 'Business Caption 6', 1),
+(11, 'Vimeo', '139518874', 'ব্যবসায়িক ভিডিও ৪', 2),
+(12, 'Vimeo', '30132551', 'ব্যবসায়িক ভিডিও ৫', 2),
+(13, 'Vimeo', '127128273', 'ব্যবসায়িক ভিডিও ৬', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_why_choose`
+--
+
+CREATE TABLE `tbl_why_choose` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `icon` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `lang_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_why_choose`
+--
+
+INSERT INTO `tbl_why_choose` (`id`, `name`, `content`, `icon`, `lang_id`) VALUES
+(1, 'Quick Response', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-clock-o', 1),
+(7, '100% Satisfaction', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-thumbs-up', 1),
+(8, 'Quality Service', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-globe', 1),
+(9, 'Award Winner', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-trophy', 1),
+(10, 'Amazing Support', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-life-ring', 1),
+(11, 'Latest Technology', 'Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones ne mundi kis.', 'fa fa-houzz', 1),
+(12, 'দ্রুত রেসপন্স', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-clock-o', 2),
+(13, '১০০% সন্তুষ্টি', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-thumbs-up', 2),
+(14, 'ভালমানের সার্ভিস', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-globe', 2),
+(15, 'পুরষ্কার জয়ী', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-trophy', 2),
+(16, 'দারুন সাপোর্ট', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-life-ring', 2),
+(17, 'টেকনোলোজি', 'যে কথাকে কাজে লাগাতে চাও, তাকে কাজে লাগানোর কথা চিন্তা করার আগে ভাবো, তুমি কি সেই কথার জাদুতে আচ্ছন্ন হয়ে গেছ কিনা। ', 'fa fa-houzz', 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_category`
+--
+ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_country`
+--
+ALTER TABLE `tbl_country`
+  ADD PRIMARY KEY (`country_id`);
+
+--
+-- Indexes for table `tbl_coupon`
+--
+ALTER TABLE `tbl_coupon`
+  ADD PRIMARY KEY (`coupon_id`);
+
+--
+-- Indexes for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
+  ADD PRIMARY KEY (`customer_id`);
+
+--
+-- Indexes for table `tbl_faq`
+--
+ALTER TABLE `tbl_faq`
+  ADD PRIMARY KEY (`faq_id`);
+
+--
+-- Indexes for table `tbl_lang`
+--
+ALTER TABLE `tbl_lang`
+  ADD PRIMARY KEY (`lang_id`);
+
+--
+-- Indexes for table `tbl_lang_key`
+--
+ALTER TABLE `tbl_lang_key`
+  ADD PRIMARY KEY (`lang_key_id`);
+
+--
+-- Indexes for table `tbl_menu`
+--
+ALTER TABLE `tbl_menu`
+  ADD PRIMARY KEY (`menu_id`);
+
+--
+-- Indexes for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_order_detail`
+--
+ALTER TABLE `tbl_order_detail`
+  ADD PRIMARY KEY (`order_detail_id`);
+
+--
+-- Indexes for table `tbl_page_about`
+--
+ALTER TABLE `tbl_page_about`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_blog`
+--
+ALTER TABLE `tbl_page_blog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_contact`
+--
+ALTER TABLE `tbl_page_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_dynamic`
+--
+ALTER TABLE `tbl_page_dynamic`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_faq`
+--
+ALTER TABLE `tbl_page_faq`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_home`
+--
+ALTER TABLE `tbl_page_home`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_home_lang_independent`
+--
+ALTER TABLE `tbl_page_home_lang_independent`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_photo_gallery`
+--
+ALTER TABLE `tbl_page_photo_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_privacy`
+--
+ALTER TABLE `tbl_page_privacy`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_service`
+--
+ALTER TABLE `tbl_page_service`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_shop`
+--
+ALTER TABLE `tbl_page_shop`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_team_member`
+--
+ALTER TABLE `tbl_page_team_member`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_term`
+--
+ALTER TABLE `tbl_page_term`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_page_video_gallery`
+--
+ALTER TABLE `tbl_page_video_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_photo`
+--
+ALTER TABLE `tbl_photo`
+  ADD PRIMARY KEY (`photo_id`);
+
+--
+-- Indexes for table `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `tbl_seo`
+--
+ALTER TABLE `tbl_seo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_service`
+--
+ALTER TABLE `tbl_service`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_settings`
+--
+ALTER TABLE `tbl_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_shipping`
+--
+ALTER TABLE `tbl_shipping`
+  ADD PRIMARY KEY (`shipping_id`);
+
+--
+-- Indexes for table `tbl_slider`
+--
+ALTER TABLE `tbl_slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_social`
+--
+ALTER TABLE `tbl_social`
+  ADD PRIMARY KEY (`social_id`);
+
+--
+-- Indexes for table `tbl_subscriber`
+--
+ALTER TABLE `tbl_subscriber`
+  ADD PRIMARY KEY (`subs_id`);
+
+--
+-- Indexes for table `tbl_team_member`
+--
+ALTER TABLE `tbl_team_member`
+  ADD PRIMARY KEY (`team_member_id`);
+
+--
+-- Indexes for table `tbl_testimonial`
+--
+ALTER TABLE `tbl_testimonial`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  ADD PRIMARY KEY (`video_id`);
+
+--
+-- Indexes for table `tbl_why_choose`
+--
+ALTER TABLE `tbl_why_choose`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `tbl_category`
+--
+ALTER TABLE `tbl_category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_country`
+--
+ALTER TABLE `tbl_country`
+  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+
+--
+-- AUTO_INCREMENT for table `tbl_coupon`
+--
+ALTER TABLE `tbl_coupon`
+  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbl_faq`
+--
+ALTER TABLE `tbl_faq`
+  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tbl_lang`
+--
+ALTER TABLE `tbl_lang`
+  MODIFY `lang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_lang_key`
+--
+ALTER TABLE `tbl_lang_key`
+  MODIFY `lang_key_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=631;
+
+--
+-- AUTO_INCREMENT for table `tbl_menu`
+--
+ALTER TABLE `tbl_menu`
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_order_detail`
+--
+ALTER TABLE `tbl_order_detail`
+  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_about`
+--
+ALTER TABLE `tbl_page_about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_blog`
+--
+ALTER TABLE `tbl_page_blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_contact`
+--
+ALTER TABLE `tbl_page_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_dynamic`
+--
+ALTER TABLE `tbl_page_dynamic`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_faq`
+--
+ALTER TABLE `tbl_page_faq`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_home`
+--
+ALTER TABLE `tbl_page_home`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_home_lang_independent`
+--
+ALTER TABLE `tbl_page_home_lang_independent`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_photo_gallery`
+--
+ALTER TABLE `tbl_page_photo_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_privacy`
+--
+ALTER TABLE `tbl_page_privacy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_service`
+--
+ALTER TABLE `tbl_page_service`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_shop`
+--
+ALTER TABLE `tbl_page_shop`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_team_member`
+--
+ALTER TABLE `tbl_page_team_member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_term`
+--
+ALTER TABLE `tbl_page_term`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_page_video_gallery`
+--
+ALTER TABLE `tbl_page_video_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_photo`
+--
+ALTER TABLE `tbl_photo`
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_seo`
+--
+ALTER TABLE `tbl_seo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_service`
+--
+ALTER TABLE `tbl_service`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `tbl_settings`
+--
+ALTER TABLE `tbl_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_shipping`
+--
+ALTER TABLE `tbl_shipping`
+  MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tbl_slider`
+--
+ALTER TABLE `tbl_slider`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_social`
+--
+ALTER TABLE `tbl_social`
+  MODIFY `social_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `tbl_subscriber`
+--
+ALTER TABLE `tbl_subscriber`
+  MODIFY `subs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_team_member`
+--
+ALTER TABLE `tbl_team_member`
+  MODIFY `team_member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `tbl_testimonial`
+--
+ALTER TABLE `tbl_testimonial`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `tbl_why_choose`
+--
+ALTER TABLE `tbl_why_choose`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

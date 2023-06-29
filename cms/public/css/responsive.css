@@ -1,0 +1,108 @@
+@media only screen and (max-width:991px) {
+    .slicknav_menu {
+        display: block;
+    }
+
+    .menu-section-2 {
+        display: none;
+    }
+
+    .caret {
+        display: none;
+    }
+
+    .banner-area nav {
+        margin-top: inherit;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .main-logo {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .main-logo a img {
+        max-height: 80px;
+    }
+
+    .header-contact {
+        text-align: center;
+    }
+
+    .booking-form {
+        margin-top: 140px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .contact-bar {
+        text-align: center;
+    }
+
+    .contact-bar-right.top-list {
+        text-align: center;
+
+    }
+
+    .contact-bar-right.top-list ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-bar-right.top-list {
+        margin-top: 5px;
+    }
+
+    .main-logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .header-contact .header-contact-item {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .booking-form {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .abs-content {
+        position: inherit;
+    }
+
+    .well.mt_30 {
+        overflow-x: scroll;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:768px) {
+    .booking-form {
+        margin-top: 140px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width:768px) {
+    .news-area .item .photo {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width:499px) {
+    .news-area .item .photo {
+        height: 270px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width:575px) {
+    .team-item .photo {
+        background-size: contain;
+    }
+}
